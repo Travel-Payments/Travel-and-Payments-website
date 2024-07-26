@@ -497,11 +497,18 @@ nav ul li a:hover {
     padding: 4rem 0.6rem 1rem;
   }
 
+  .service-cards {
+    padding-bottom: 5rem;
+  }
+
   .service-card {
     padding: 2rem 2.8rem;
     flex-direction: column-reverse;
     min-height: 58vh;
     justify-content: flex-end;
+    margin-bottom: 0;
+    right: auto;
+    left: auto;
   }
 
   .service-content > p {
