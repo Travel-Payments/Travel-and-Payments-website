@@ -498,6 +498,7 @@ nav ul li a:hover {
   }
 
   .service-cards {
+    width: 96%;
     padding-bottom: 5rem;
   }
 
@@ -536,10 +537,6 @@ nav ul li a:hover {
 
   .service-content > p {
     max-width: 92%;
-  }
-
-  .service-cards {
-    width: 96%;
   }
 
   .service-card {
