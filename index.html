@@ -178,17 +178,18 @@
             <div class="contact-content-label">Reach out to us today!</div>
             <h2 class="contact-content-heading">Trust us to manage your APAC payment needs, so you can prioritize your core business responsibilities!</h2>
           </div>
-          <form action="" class="contact-form">
+          <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
             <p>Let's connect and find solutions together!</p>
+            <input type="hidden" name="access_key" value="cdbc9cee-7774-447b-87e9-e04d514f7242" />
             <div class="contact-name">
-              <input type="text" placeholder="First Name" required />
-              <input type="text" placeholder="Last Name" required />
+              <input type="text" name="First-Name" placeholder="First Name" required />
+              <input type="text" name="Last Name" required />
             </div>
             <div class="contact-email">
-              <input type="email" placeholder="Email id" required />
+              <input type="email" name="Email id" required />
             </div>
             <div class="contact-message">
-              <textarea placeholder="How we can help you?"></textarea>
+              <textarea placeholder="How we can help you?" name="Message" required></textarea>
             </div>
             <button type="submit" class="primary-button submit-btn">Submit</button>
           </form>
