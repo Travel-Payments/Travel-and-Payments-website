@@ -198,6 +198,12 @@ nav {
   margin: auto;
 }
 
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .navlinks {
   display: flex;
   align-items: center;
@@ -226,6 +232,10 @@ nav ul li a:hover {
 .nav-close {
   display: none;
 }
+
+.nav-button {
+  font-size: var(--font-label-2);
+}
 /* ------------ Tablet design ------------ */
 @media (max-width: 1024px) {
   .logo img {
@@ -237,7 +247,7 @@ nav ul li a:hover {
   }
 }
 /* ------------ Mobile design ------------ */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .navlinks {
     position: fixed;
     height: 100vh;
@@ -246,7 +256,8 @@ nav ul li a:hover {
     background: var(--color-white);
     right: 0;
     top: 0;
-    width: 50vw;
+    width: 60vw;
+    padding: 2rem;
     transform: translateX(100%);
     display: none;
     transition: transform 0.75s cubic-bezier(0.25, 0.1, 0.25, 1);
