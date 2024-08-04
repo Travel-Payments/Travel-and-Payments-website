@@ -181,10 +181,12 @@ h3 {
 
 /* ------------ navigation styles ------------ */
 nav {
-  /* position: absolute; */
+  position: sticky;
+  top: 0;
   /* transform: translate(-50%); */
   width: 100%;
   box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
+  z-index: 50;
 }
 
 .nav-container {
@@ -193,7 +195,7 @@ nav {
   padding: 1.2rem;
   background: var(--color-white);
   justify-content: space-between;
-  z-index: 100;
+  z-index: 10;
   max-width: 1440px;
   margin: auto;
 }
@@ -445,7 +447,7 @@ nav ul li a:hover {
 }
 
 .service-card {
-  background: var(--color-white);
+  background: var(--color-grey-1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -456,8 +458,8 @@ nav ul li a:hover {
   gap: 2.8rem;
   border-radius: 2rem;
   position: sticky;
-  box-shadow: 1rem 1rem 0rem #dddddd;
-  outline: 0.05rem solid var(--color-grey-6);
+  box-shadow: 1rem 1rem 0rem var(--color-grey-4);
+  outline: 0.05rem solid var(--color-grey-4);
 }
 
 .service-card-1 {
@@ -484,14 +486,16 @@ nav ul li a:hover {
 }
 
 .service-card-content > h3 {
-  color: var(--color-black);
+  color: var(--color-white);
+  font-weight: 700;
 }
 
 .service-card-content > p {
   font-size: var(--font-body-2);
   font-weight: var(--font-weight-body-2);
   line-height: var(--line-height-body-2);
-  color: var(--color-grey-3);
+  color: var(--color-grey-5);
+  text-align: justify;
 }
 
 .service-card-image {
