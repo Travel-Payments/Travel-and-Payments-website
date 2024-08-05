@@ -421,6 +421,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
   position: sticky;
   top: 2rem;
   margin: 0 0 0.5rem;
@@ -430,6 +431,35 @@ nav ul li a:hover {
   color: var(--color-black);
 }
 
+.service-content .service-content__for {
+  /* margin-top: 1rem; */
+  display: flex;
+
+  --offers-gap: 4rem;
+  gap: var(--offers-gap);
+
+  list-style: none;
+  font-size: var(--font-label-3);
+  font-weight: var(--font-weight-heading-3);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: var(--color-grey-4)
+}
+.service-content .service-content__for > li + li {
+  position: relative;
+}
+.service-content .service-content__for > li + li::before {
+  content: '';
+  position: absolute;
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 50%;
+  background-color: var(--color-accent-blue);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: calc(-1 * var(--offers-gap) / 2 );
+}
+
 .service-content > p {
   font-size: var(--font-body-2);
   font-weight: var(--font-weight-body-2);
@@ -437,8 +467,10 @@ nav ul li a:hover {
   color: var(--color-grey-4);
   max-width: 37.5rem;
   text-align: center;
-  margin: 1.25rem 0 3rem;
+  /* margin: 1.25rem 0 3rem; */
+  margin-bottom: 3rem;
 }
+
 
 .service-cards {
   margin: auto;
