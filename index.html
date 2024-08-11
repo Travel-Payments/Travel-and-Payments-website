@@ -7,6 +7,11 @@
     <meta name="description" content="Travel and Payments helps Merchants, Payment Companies, and Venture Capitals/Investors by providing payment solutions." />
     <link rel="shortcut icon" href="assets/icons/favicon.svg" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+
+    <!-- ------------ all scripts here ------------ -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <nav>
@@ -17,11 +22,11 @@
           </a>
         <ul class="navlinks">
           <img class="nav-close" src="assets/icons/close.svg" alt="close nav" />
-          <li><a href="" class="nav-link" data-target=".service-section">Services</a></li>
-          <li><a href="" class="nav-link" data-target=".event-section">Events</a></li>
-          <li><a href="" class="nav-link" data-target=".community-section">Community</a></li>
-          <li><a href="" class="nav-link" data-target=".about-section">About</a></li>
-          <li><a href="" class="nav-link" data-target=".contact-section">Contact Us</a></li>
+          <li><a href="#serviceSection" class="nav-link">Services</a></li>
+          <li><a href="#eventSection" class="nav-link">Events</a></li>
+          <li><a href="#communitySection" class="nav-link">Community</a></li>
+          <li><a href="#aboutSection" class="nav-link">About</a></li>
+          <li><a href="#contactSection" class="nav-link">Contact Us</a></li>
           <a href="#contact-section-id"><button class="primary-button nav-button">Book a Strategy session</button></a>
         </ul>
         <img class="nav-menu" src="assets/icons/hamburger.svg" alt="open nav" />
@@ -41,7 +46,7 @@
           <img class="hero-img" src="assets/images/card 1.svg" alt="card" />
         </div>
       </div>
-      <div class="service-section">
+      <div id="serviceSection" class="service-section">
         <div class="service-content">
           <h2>What We <span>Offer</span></h2>
           <ul class="service-content__for">
@@ -90,7 +95,7 @@
           </div>
         </div>
       </div>
-      <div class="event-section">
+      <div id="eventSection" class="event-section">
         <div class="event-content">
           <h2>Our <span>Events</span></h2>
           <p>We bring together payment industry professionals for enriching networking opportunities and collaborative discussions. Stay connected with our upcoming events and engage with a community passionate about building valuable connections in the world of Payments!</p>
@@ -119,7 +124,7 @@
           </div>
         </div>
       </div>
-      <div class="community-section">
+      <div id="communitySection" class="community-section">
         <div class="community-content">
           <h2>Revolutionizing Payments Through <br /><span>Community Power!</span></h2>
           <p>In the ever-evolving world of payments and fintech, collaboration and knowledge sharing are more important than ever. At Travel & Payments, we unite payment professionals to share their invaluable information and expertise, offering essential support for those navigating the complexities of the payments industry.</p>
@@ -163,7 +168,7 @@
           </div>
         </div>
       </div>
-      <div class="about-section">
+      <div id="aboutSection" class="about-section">
         <div class="about-images">
           <div class="about-images-container">
             <div class="about-image-overlay"></div>
@@ -181,7 +186,7 @@
           <p>Passionate about all things payments, not limiting to pay-ins, pay-outs and payment compliance, our founding partners <b>Vishal</b> and <b>Sheue Chee</b> bring a combined 33+ years of experience from top-tier organizations including VISA, NTT Data, TSYS, JP Morgan, Expedia, Uber, Microsoft, and advocacy groups like MAG, MRC and MPAI. <br /><br />Furthermore, our wide network of payment professionals is here to support and enhance specific payment initiatives with deep expertise in the complex global payment ecosystem, specifically within APAC regions such as India, Taiwan, South Korea, Japan, China and the SEA.</p>
         </div>
       </div>
-      <div class="contact-section" id="contact-section-id">
+      <div id="contactSection" class="contact-section" id="contact-section-id">
         <div class="contact-container">
           <div class="contact-content">
             <div class="contact-content-label">Reach out to us today!</div>
@@ -214,9 +219,5 @@
       </div>
     </footer>
 
-    <!-- ------------ all scripts here ------------ -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="script.js"></script>
   </body>
 </html>
