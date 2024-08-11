@@ -366,14 +366,20 @@ nav ul li a:hover {
 }
 
 .hero-img {
-  border-radius: 2rem;
   position: absolute;
-  height: 85%;
   z-index: 0;
-  right: 15%;
+  border-radius: 2rem;
+}
+.hero-img--horizontal {
   top: 50%;
+  right: 15%;
+  height: 85%;
   transform: translateY(-50%);
 }
+.hero-img--vertical {
+  display: none;
+}
+
 /* ------------ Tablet design ------------ */
 @media (max-width: 1024px) {
   .hero-content {
@@ -401,12 +407,17 @@ nav ul li a:hover {
     gap: 1rem;
   }
 
-  .hero-img {
-    width: 100%;
+  .hero-img--horizontal {
+    display: none;
+  }
+
+  .hero-img--vertical {
+    display: inline-block;
+    width: 80%;
     height: auto;
-    top: 0;
+    top: 5%;
     left: 50%;
-    transform: translateX(-50%) rotate(0deg);
+    transform: translateX(-50%);
     /* transform-origin: bottom; */
 
     /* right: 50%; */
@@ -1116,7 +1127,7 @@ nav ul li a:hover {
 
 .contact-container {
   background: var(--color-accent-light-blue);
-  background-image: url(assets/illustrations/abstract-pattern.svg);
+  background-image: url(./assets/vectors/abstract-pattern.svg);
   background-position: bottom left;
   background-repeat: no-repeat;
   padding: 3.75rem;

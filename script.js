@@ -53,7 +53,7 @@ overlay.addEventListener("click", () => {
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 641px)", () => {
-  gsap.to(".hero-img", {
+  gsap.to(".hero-img--horizontal", {
     right: "5%",
     scrollTrigger: {
       trigger: ".hero-container",
@@ -61,7 +61,7 @@ mm.add("(min-width: 641px)", () => {
       // markers: true,
       start: "-10% 10%",
       end: "top top",
-      scrub: 1,
+      scrub: .7,
     },
   });
 });
