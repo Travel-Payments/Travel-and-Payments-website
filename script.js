@@ -50,15 +50,37 @@ overlay.addEventListener("click", () => {
 //   },
 // });
 
-let mm = gsap.matchMedia();
+const mm = gsap.matchMedia();
+const tl1 = gsap.timeline({
+  // scrollTrigger: {
+  //   trigger: '.service-cards',
+  //   start: 'center center',
+  //   scrub: true,
+  //   markers: true,
+  //   // pin: true
+  // },
+})
+// gsap.utils.toArray('.service-card').forEach((card, i) => {
+//   if (i == 1) {
+//     gsap.to(card, {yPercent: 110})
+//   } else if (i == 2) {
+//     gsap.to(card, {yPercent: 220})
+//   }
+// })
+
+// tl1.to('.service-card-2', {
+//   translateY: '2rem',
+//   duration: 2,
+// }).to('.service-card-3', {
+//   translateY: '4rem',
+//   duration: 2,
+// })
 
 mm.add("(min-width: 641px)", () => {
   gsap.to(".hero-img--horizontal", {
     right: "5%",
     scrollTrigger: {
       trigger: ".hero-container",
-      // scroller: "body",
-      // markers: true,
       start: "-10% 10%",
       end: "top top",
       scrub: .7,
