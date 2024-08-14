@@ -432,7 +432,7 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  position: sticky;
+  /* position: sticky; */
   top: 2rem;
   margin: 0 0 0.5rem;
 }
@@ -486,18 +486,25 @@ nav ul li a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* gap: 3rem; */
+  align-items: start;
   margin: auto;
   width: 90%;
-  padding-bottom: 7.5rem;
+  /* margin-bottom: 7.5rem; */
+  margin-bottom: 5rem;
+
+  --card-spacing: 3rem;
+  gap: var(--card-spacing);
+  padding-bottom: calc(var(--card-spacing) * 2);
+  transform: translateY(calc(100% - var(--card-spacing) * 2));
 }
 
 .service-card {
-  position: sticky;
+  /* position: sticky; */
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
+  /* margin: auto; */
   width: 95%;
   min-height: 27rem;
   padding: 3.2rem 3.6rem;
@@ -507,30 +514,43 @@ nav ul li a:hover {
   box-shadow: 1rem 1rem 0rem var(--color-grey-4);
   outline: 0.075rem solid var(--color-grey-4);
 
-  /* --transform-y: -100%;
-  --top-margin: 2rem;
-  --left-margin: 2rem; */
+  /* --transform-y: -100%; */
 }
 
 .service-card-1 {
+  /* top: 0;
+  left: 0; */
+
   /* z-index: 1; */
 
-  right: 20%;
-  top: 16rem;
+  /* right: 20%;
+  top: 16rem; */
   /* background: #fcf8f3; */
 }
 .service-card-2 {
+  /* margin-left: var(--card-spacing); */
+  
+  position: absolute;
+  top: calc(var(--card-spacing));
+  left: calc(var(--card-spacing));
+  
   /* transform: translate(var(--left-margin), calc(var(--transform-y) + var(--top-margin))); */
   
   /* z-index: 2; */
   
   /* top: 2rem;
   left: 2rem; */
-  margin-bottom: -2rem;
-  top: 18rem;
+  
+  /* margin-bottom: -2rem;
+  top: 18rem; */
   /* background: #fff7fc; */
 }
 .service-card-3 {
+  /* margin-left: calc(var(--card-spacing) * 2); */
+
+  position: absolute;
+  top: calc(var(--card-spacing) * 2);
+  left: calc(var(--card-spacing) * 2);
   
   /* transform: translate(calc(var(--left-margin) * 2), calc(var(--transform-y) * 2 + var(--top-margin) * 2)); */
   
@@ -538,9 +558,9 @@ nav ul li a:hover {
   /* top: 4rem;
   left: 4rem; */
 
-  margin-bottom: -4rem;
+  /* margin-bottom: -4rem;
   left: 20%;
-  top: 20rem;
+  top: 20rem; */
   /* background: #eef7ff; */
 }
 

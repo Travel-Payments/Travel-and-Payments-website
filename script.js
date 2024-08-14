@@ -51,15 +51,32 @@ overlay.addEventListener("click", () => {
 // });
 
 const mm = gsap.matchMedia();
-const tl1 = gsap.timeline({
-  // scrollTrigger: {
-  //   trigger: '.service-cards',
-  //   start: 'center center',
-  //   scrub: true,
-  //   markers: true,
-  //   // pin: true
-  // },
+
+// const serviceCards = gsap.utils.toArray('.service-card')
+// console.log(serviceCards)
+
+gsap.to('.service-card', {
+  yPercent: -100,
+  stagger: 0.5,
+  scrollTrigger: {
+    trigger: '.service-section',
+    start: 'top 10%',
+    startTrigger: '.service-section',
+    markers: true,
+    scrub: true,
+    pin: true
+  }
 })
+
+// const tl1 = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: '.service-cards',
+//     start: 'center center',
+//     scrub: true,
+//     markers: true,
+//     // pin: true
+//   },
+// })
 // gsap.utils.toArray('.service-card').forEach((card, i) => {
 //   if (i == 1) {
 //     gsap.to(card, {yPercent: 110})
