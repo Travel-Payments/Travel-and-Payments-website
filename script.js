@@ -18,103 +18,38 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("show");
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   // Function to smooth scroll to the target section
-//   function smoothScroll(target) {
-//     const targetElement = document.querySelector(target);
-//     if (targetElement) {
-//       targetElement.scrollIntoView({ behavior: "smooth" });
-//     }
-//   }
-
-//   // Add click event listener to all nav links
-//   const navLinks = document.querySelectorAll(".nav-link");
-//   navLinks.forEach((link) => {
-//     link.addEventListener("click", (e) => {
-//       e.preventDefault();
-//       const target = e.target.getAttribute("data-target");
-//       smoothScroll(target);
-//     });
-//   });
-// });
-
-// gsap.to(".hero-container .hero-img", {
-//   right: "5%",
-//   scrollTrigger: {
-//     trigger: ".hero-container .hero-img",
-//     scroller: "body",
-//     // markers: true,
-//     start: "0% 0%",
-//     end: "100% 40%",
-//     scrub: 1,
-//   },
-// });
 
 const mm = gsap.matchMedia();
 
-// const serviceCards = gsap.utils.toArray('.service-card')
-// console.log(serviceCards)
+mm.add(
+  {
+  isTabletPortraitUp: "(min-width: 641px)",
+  isTabletLandscapeUp: "(min-width: 1024px)",
+}, (context) => {
+  let {isTabletPortraitUp, isTabletLandscapeUp, isTabletLandscapeDown} = context.conditions
 
-gsap.to('.service-card', {
-  yPercent: -100,
-  stagger: 0.5,
-  scrollTrigger: {
-    trigger: '.service-section',
-    start: 'top 10%',
-    startTrigger: '.service-section',
-    markers: true,
-    scrub: true,
-    pin: true
-  }
-})
-
-// const tl1 = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.service-cards',
-//     start: 'center center',
-//     scrub: true,
-//     markers: true,
-//     // pin: true
-//   },
-// })
-// gsap.utils.toArray('.service-card').forEach((card, i) => {
-//   if (i == 1) {
-//     gsap.to(card, {yPercent: 110})
-//   } else if (i == 2) {
-//     gsap.to(card, {yPercent: 220})
-//   }
-// })
-
-// tl1.to('.service-card-2', {
-//   translateY: '2rem',
-//   duration: 2,
-// }).to('.service-card-3', {
-//   translateY: '4rem',
-//   duration: 2,
-// })
-
-mm.add("(min-width: 641px)", () => {
-  gsap.to(".hero-img--horizontal", {
-    right: "5%",
+  gsap.to('.card-up', {
+    yPercent: -100,
+    stagger: 0.25,
     scrollTrigger: {
-      trigger: ".hero-container",
-      start: "-10% 10%",
-      end: "top top",
-      scrub: .7,
-    },
-  });
-});
+      trigger: '.service-section',
+      start: () => isTabletLandscapeUp ? 'top 10%' : 'top 5%',
+      end: '+1500px',
+      // markers: true,
+      scrub: .5,
+      pin: true
+    }
+  })
 
-// mm.add("(max-width: 640px)", () => {
-//   gsap.to(".hero-container .hero-img", {
-//     top: "-5%",
-//     scrollTrigger: {
-//       trigger: ".hero-container .hero-img",
-//       scroller: "body",
-//       // markers: true,
-//       start: "-10% 10%",
-//       end: "40% 28%",
-//       scrub: 1,
-//     },
-//   });
-// });
+  if (isTabletPortraitUp) {
+    gsap.to(".hero-img--horizontal", {
+      right: "5%",
+      scrollTrigger: {
+        trigger: ".hero-container",
+        start: "-10% 10%",
+        end: "top top",
+        scrub: .7,
+      },
+    });
+  }
+});
