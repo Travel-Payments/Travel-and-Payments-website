@@ -41,7 +41,6 @@ mm.add(
     }
   })
   
-  console.log('working', isTabletLandscapeUp)
   if (isTabletPortraitUp) {
     gsap.to(".hero-img--horizontal", {
       right: "5%",
