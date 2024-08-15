@@ -20,27 +20,28 @@ overlay.addEventListener("click", () => {
 
 
 const mm = gsap.matchMedia();
+console.log(mm)
 
 mm.add(
   {
   isTabletPortraitUp: "(min-width: 641px)",
-  isTabletLandscapeUp: "(min-width: 1024px)",
+  isTabletLandscapeDown: "(max-width: 1024px)",
 }, (context) => {
-  let {isTabletPortraitUp, isTabletLandscapeUp, isTabletLandscapeDown} = context.conditions
-
+  let {isTabletPortraitUp, isTabletLandscapeDown} = context.conditions
+  
   gsap.to('.card-up', {
     yPercent: -100,
-    stagger: 0.25,
+    stagger: 0.5,
     scrollTrigger: {
       trigger: '.service-section',
-      start: () => isTabletLandscapeUp ? 'top 10%' : 'top 5%',
+      start: isTabletLandscapeDown ? 'top 5%' : 'top 10%',
       end: '+1500px',
-      // markers: true,
       scrub: .5,
       pin: true
     }
   })
-
+  
+  console.log('working', isTabletLandscapeUp)
   if (isTabletPortraitUp) {
     gsap.to(".hero-img--horizontal", {
       right: "5%",
