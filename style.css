@@ -167,7 +167,6 @@ h3 {
   margin: 0 auto;
   max-width: 1440px;
   padding: 0 1.2rem;
-  /* background: var(--color-black); */
 }
 
 /* ------------ Tablet design ------------ */
@@ -188,7 +187,6 @@ h3 {
 nav {
   position: sticky;
   top: 0;
-  /* transform: translate(-50%); */
   width: 100%;
   box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.05);
   z-index: 50;
@@ -243,6 +241,7 @@ nav ul li a:hover {
 .nav-button {
   font-size: var(--font-label-2);
 }
+
 /* ------------ Tablet design ------------ */
 @media (max-width: 1024px) {
   .logo img {
@@ -386,7 +385,6 @@ nav ul li a:hover {
 /* ------------ Mid Tablet design ------------ */
 @media (max-width: 640px) {
   .hero-section {
-    /* padding: 1rem 0; */
     padding: 3rem 0;
   }
 
@@ -419,11 +417,8 @@ nav ul li a:hover {
 
 /* ------------ Service Section styles ------------ */
 .service-section {
-  /* display: flex;
-  flex-direction: column; */
   padding: 2rem 0;
   width: 100%;
-  /* z-index: -1; */
   position: relative;
 }
 
@@ -432,7 +427,6 @@ nav ul li a:hover {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  /* position: sticky; */
   top: 2rem;
   margin: 0 0 0.5rem;
 }
@@ -442,7 +436,6 @@ nav ul li a:hover {
 }
 
 .service-content .service-content__for {
-  /* margin-top: 1rem; */
   display: flex;
 
   --offers-gap: 4rem;
@@ -477,7 +470,6 @@ nav ul li a:hover {
   color: var(--color-grey-4);
   max-width: 37.5rem;
   text-align: center;
-  /* margin: 1.25rem 0 3rem; */
   margin-bottom: 1.5rem;
 }
 
@@ -489,7 +481,6 @@ nav ul li a:hover {
   align-items: start;
   margin: auto;
   width: 90%;
-  /* margin-bottom: 7.5rem; */
   margin-bottom: 5rem;
 
   --card-spacing: 3rem;
@@ -561,7 +552,7 @@ nav ul li a:hover {
 }
 
 /* ------------ Tablet design ------------ */
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .service-section {
     padding: 4rem 0.6rem 1rem;
   }
@@ -576,7 +567,6 @@ nav ul li a:hover {
 
   .service-cards {
     width: 96%;
-    /* padding-bottom: 2rem; */
     margin-bottom: 3rem;
 
     --card-spacing: 5rem;
@@ -597,17 +587,14 @@ nav ul li a:hover {
   }
 
   .service-card-1 {
-    /* top: 12rem; */
   }
 
   .service-card-2 {
     left: 0;
-    /* top: 14rem; */
   }
   
   .service-card-3 {
     left: 0;
-    /* top: 16rem; */
   }
 }
 
@@ -618,7 +605,7 @@ nav ul li a:hover {
 }
 
 /* ------------ Mobile design ------------ */
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .service-section {
     padding: 2rem 0.6rem 0;
   }
@@ -631,23 +618,15 @@ nav ul li a:hover {
     max-width: 92%;
   }
 
-  .service-card {
-    width: 100%;
-    /* flex-direction: column-reverse; */
-    padding: 1.8rem 1.4rem;
-    gap: 1rem;
-    /* top: 1rem; */
+  .service-cards {
+    --card-spacing: 5rem;
   }
 
-  /* .service-card-1 {
-    box-shadow: 10px 10px 0px #b4dbfa;
+  .service-card {
+    width: 100%;
+    padding: 1.8rem 1.4rem;
+    gap: 1rem;
   }
-  .service-card-2 {
-    box-shadow: 10px 10px 0px #e3b4fa;
-  }
-  .service-card-3 {
-    box-shadow: 10px 10px 0px #ffcd9f;
-  } */
 
   .service-card img {
     width: 100%;
@@ -784,6 +763,7 @@ nav ul li a:hover {
     .event-section {
       width: 100%;
       padding: 1rem;
+      margin-top: 4rem;
       gap: 2.5rem;
     }
 
