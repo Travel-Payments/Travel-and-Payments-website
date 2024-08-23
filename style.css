@@ -1072,6 +1072,13 @@ nav ul li a:hover {
   color: var(--color-grey-1);
 }
 
+.credibility-logos {
+  display: inline-block;
+  max-width: 100%;
+  margin-top: .5rem;
+  margin-left: -0.15rem;
+}
+
 /* ------------ Mid-Desktop design ------------ */
 @media (max-width: 1250px) {
   .about-section {
