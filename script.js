@@ -44,12 +44,18 @@ mm.add(
   if (isTabletPortraitUp) {
     gsap.to(".hero-img--horizontal", {
       right: "5%",
-      scrollTrigger: {
-        trigger: ".hero-container",
-        start: "-10% 10%",
-        end: "top top",
-        scrub: .7,
-      },
+      yoyo: true,
+      repeat: -1,
+      duration: 1.5,
+      ease: "power1.inOut",
+    });
+  } else {
+    gsap.to(".hero-img--vertical", {
+      top: "10%",
+      yoyo: true,
+      repeat: -1,
+      duration: 1.5,
+      ease: "power1.inOut",
     });
   }
 });

@@ -409,7 +409,7 @@ nav ul li a:hover {
     display: inline-block;
     width: 80%;
     height: auto;
-    top: 5%;
+    top: 3%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -502,21 +502,6 @@ nav ul li a:hover {
   outline: 0.075rem solid var(--color-grey-4);
 }
 
-.service-card-1 {
-}
-.service-card-2 {
-  position: absolute;
-  top: calc(var(--card-spacing));
-  left: calc(var(--card-spacing));
-  transform: translateY(100%);
-}
-.service-card-3 {
-  position: absolute;
-  top: calc(var(--card-spacing) * 2);
-  left: calc(var(--card-spacing) * 2);
-  transform: translateY(100%);
-}
-
 .service-card-content {
   display: flex;
   flex-direction: column;
@@ -524,7 +509,6 @@ nav ul li a:hover {
 }
 
 .service-card-content > h3 {
-  color: var(--color-white);
   font-weight: var(--font-weight-heading-3);
 }
 
@@ -532,8 +516,53 @@ nav ul li a:hover {
   font-size: var(--font-body-2);
   font-weight: var(--font-weight-body-2);
   line-height: var(--line-height-body-2);
-  color: var(--color-grey-5);
   text-align: justify;
+}
+
+.service-card-1 {
+  background: var(--color-grey-1);
+  box-shadow: 1rem 1rem 0rem var(--color-grey-4);
+  outline: 0.075rem solid var(--color-white);
+}
+.service-card-1 h3 {
+  color: var(--color-white);
+}
+.service-card-1 p {
+  color: var(--color-grey-5);
+}
+
+.service-card-2 {
+  position: absolute;
+  top: calc(var(--card-spacing));
+  left: calc(var(--card-spacing));
+  transform: translateY(100%);
+  
+  background: #c1cad6;
+  box-shadow: 1rem 1rem 0rem #dee8f7;
+  outline: 0.075rem solid var(--color-white);
+}
+.service-card-2 h3 {
+  color: var(--color-grey-2);
+}
+.service-card-2 p {
+  color: var(--color-grey-3);
+}
+
+.service-card-3 {
+  position: absolute;
+  top: calc(var(--card-spacing) * 2);
+  left: calc(var(--card-spacing) * 2);
+  transform: translateY(100%);
+  
+  background: var(--color-white);
+  box-shadow: 1rem 1rem 0rem #dddddd;
+  outline: 0.075rem solid var(--color-grey-5);
+}
+.service-card-3 h3 {
+  color: var(--color-grey-2);
+}
+.service-card-3 p {
+  color: var(--color-grey-3);
 }
 
 .service-card-image {
