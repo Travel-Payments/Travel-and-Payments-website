@@ -110,6 +110,11 @@ body {
   overflow-x: hidden;
 }
 
+strong {
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
 ::-webkit-scrollbar {
   width: .8rem;
 }
@@ -367,7 +372,7 @@ nav ul li a:hover {
 }
 .hero-img--horizontal {
   top: 50%;
-  right: 15%;
+  right: 4%;
   height: 85%;
   transform: translateY(-50%);
 }

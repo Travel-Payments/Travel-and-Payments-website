@@ -43,18 +43,18 @@ mm.add(
   
   if (isTabletPortraitUp) {
     gsap.to(".hero-img--horizontal", {
-      right: "5%",
+      xPercent: -20,
       yoyo: true,
       repeat: -1,
-      duration: 1.5,
+      duration: 2.25,
       ease: "power1.inOut",
     });
   } else {
     gsap.to(".hero-img--vertical", {
-      top: "10%",
+      yPercent: 10,
       yoyo: true,
       repeat: -1,
-      duration: 1.5,
+      duration: 2.25,
       ease: "power1.inOut",
     });
   }
