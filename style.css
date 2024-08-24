@@ -111,12 +111,12 @@ body {
 }
 
 strong {
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.02em;
 }
 
 ::-webkit-scrollbar {
-  width: .8rem;
+  width: 0.8rem;
 }
 
 ::-webkit-scrollbar-track {
@@ -451,13 +451,13 @@ nav ul li a:hover {
   font-weight: var(--font-weight-heading-3);
   letter-spacing: 0.1rem;
   text-transform: uppercase;
-  color: var(--color-grey-4)
+  color: var(--color-grey-4);
 }
 .service-content .service-content__for > li + li {
   position: relative;
 }
 .service-content .service-content__for > li + li::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 0.375rem;
   height: 0.375rem;
@@ -465,7 +465,7 @@ nav ul li a:hover {
   background-color: var(--color-accent-blue);
   top: 50%;
   transform: translate(-50%, -50%);
-  left: calc(-1 * var(--offers-gap) / 2 );
+  left: calc(-1 * var(--offers-gap) / 2);
 }
 
 .service-content > p {
@@ -477,7 +477,6 @@ nav ul li a:hover {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-
 
 .service-cards {
   position: relative;
@@ -541,7 +540,7 @@ nav ul li a:hover {
   top: calc(var(--card-spacing));
   left: calc(var(--card-spacing));
   transform: translateY(100%);
-  
+
   background: #c1cad6;
   box-shadow: 1rem 1rem 0rem #dee8f7;
   outline: 0.075rem solid var(--color-white);
@@ -558,7 +557,7 @@ nav ul li a:hover {
   top: calc(var(--card-spacing) * 2);
   left: calc(var(--card-spacing) * 2);
   transform: translateY(100%);
-  
+
   background: var(--color-white);
   box-shadow: 1rem 1rem 0rem #dddddd;
   outline: 0.075rem solid var(--color-grey-5);
@@ -620,13 +619,13 @@ nav ul li a:hover {
     max-width: 80%;
   }
 
-  .service-card-1 {
-  }
+  /* .service-card-1 {
+  } */
 
   .service-card-2 {
     left: 0;
   }
-  
+
   .service-card-3 {
     left: 0;
   }
@@ -1081,7 +1080,7 @@ nav ul li a:hover {
 .credibility-logos {
   display: inline-block;
   max-width: 100%;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   margin-left: -0.15rem;
 }
 
