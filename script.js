@@ -27,7 +27,6 @@ gsap.to(".card-up", {
     end: "+1500px",
     scrub: 0.5,
     pin: ".service-section",
-    // markers: true,
   },
 })
 
@@ -36,6 +35,7 @@ const mm = gsap.matchMedia()
 mm.add(
   {
     isTabletPortraitUp: "(min-width: 641px)",
+    isTabletPortraitDown: "(max-width: 640px)",
   },
   (context) => {
     let { isTabletPortraitUp } = context.conditions
