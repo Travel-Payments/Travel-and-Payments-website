@@ -18,16 +18,20 @@ overlay.addEventListener("click", () => {
   overlay.classList.remove("show")
 })
 
-gsap.to(".card-up", {
-  yPercent: -100,
-  stagger: 0.5,
-  scrollTrigger: {
-    trigger: ".service-content",
-    start: () => `top ${document.querySelector("nav").offsetHeight + 16}`,
-    end: "+1500px",
-    scrub: 0.5,
-    pin: ".service-section",
-  },
+const serviceCards = gsap.utils.toArray(".card-up")
+
+serviceCards.forEach((serviceCard, i) => {
+  gsap.from(serviceCard, {
+    xPercent: i % 2 === 1 ? 60 : -60,
+    opacity: 0,
+
+    scrollTrigger: {
+      trigger: serviceCard,
+      start: "top 85%",
+      end: "bottom 85%",
+      once: true,
+    },
+  })
 })
 
 const mm = gsap.matchMedia()

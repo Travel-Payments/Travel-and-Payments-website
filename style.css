@@ -424,7 +424,7 @@ nav ul li a:hover {
 .service-section {
   padding: 2rem 0;
   width: 100%;
-  position: relative;
+  overflow-x: hidden;
 }
 
 .service-content {
@@ -482,14 +482,13 @@ nav ul li a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: center;
   margin: auto;
   width: 90%;
   margin-bottom: 5rem;
 
   --card-spacing: 3rem;
   gap: var(--card-spacing);
-  padding-bottom: calc(var(--card-spacing) * 2);
 }
 
 .service-card {
@@ -536,11 +535,6 @@ nav ul li a:hover {
 }
 
 .service-card-2 {
-  position: absolute;
-  top: calc(var(--card-spacing));
-  left: calc(var(--card-spacing));
-  transform: translateY(100%);
-
   background: #c1cad6;
   box-shadow: 1rem 1rem 0rem #dee8f7;
   outline: 0.075rem solid var(--color-white);
@@ -553,11 +547,6 @@ nav ul li a:hover {
 }
 
 .service-card-3 {
-  position: absolute;
-  top: calc(var(--card-spacing) * 2);
-  left: calc(var(--card-spacing) * 2);
-  transform: translateY(100%);
-
   background: var(--color-white);
   box-shadow: 1rem 1rem 0rem #dddddd;
   outline: 0.075rem solid var(--color-grey-5);
@@ -577,13 +566,6 @@ nav ul li a:hover {
   margin: auto;
 }
 
-/* ------------ Small Monitor design ------------ */
-@media screen and (max-width: 1180px) {
-  .service-cards {
-    margin-bottom: 8rem;
-  }
-}
-
 /* ------------ Tablet design ------------ */
 @media screen and (max-width: 1024px) {
   .service-section {
@@ -601,8 +583,6 @@ nav ul li a:hover {
   .service-cards {
     width: 96%;
     margin-bottom: 3rem;
-
-    --card-spacing: 5rem;
   }
 
   .service-card {
@@ -618,23 +598,6 @@ nav ul li a:hover {
   .service-content > p {
     max-width: 80%;
   }
-
-  /* .service-card-1 {
-  } */
-
-  .service-card-2 {
-    left: 0;
-  }
-
-  .service-card-3 {
-    left: 0;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .service-cards {
-    --card-spacing: 6.5rem;
-  }
 }
 
 /* ------------ Mobile design ------------ */
@@ -649,10 +612,6 @@ nav ul li a:hover {
 
   .service-content > p {
     max-width: 92%;
-  }
-
-  .service-cards {
-    --card-spacing: 5rem;
   }
 
   .service-card {
@@ -796,8 +755,8 @@ nav ul li a:hover {
   @media (max-width: 480px) {
     .event-section {
       width: 100%;
-      padding: 1rem;
-      margin-top: 4rem;
+      padding: 0rem 1rem 2rem;
+      margin-top: 2rem;
       gap: 2.5rem;
     }
 
