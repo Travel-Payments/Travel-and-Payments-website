@@ -424,7 +424,6 @@ nav ul li a:hover {
 .service-section {
   padding: 2rem 0;
   width: 100%;
-  overflow-x: hidden;
 }
 
 .service-content {
@@ -570,6 +569,7 @@ nav ul li a:hover {
 @media screen and (max-width: 1024px) {
   .service-section {
     padding: 4rem 0.6rem 1rem;
+    overflow-x: hidden;
   }
 
   .service-content .service-content__for {
