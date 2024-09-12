@@ -1218,6 +1218,59 @@ nav ul li a:hover {
   background-color: var(--color-grey-6);
 }
 
+.contact-confirmation {
+  /* display: flex; */
+  display: none;
+  flex-direction: column;
+  gap: 0.2rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 1000;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  padding: 2rem 3.2rem;
+  border-radius: 1rem;
+  background-color: var(--color-white);
+  box-shadow: 0.6rem 0.6rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+
+.contact-confirmation p {
+  font-size: var(--font-heading-3);
+  font-weight: var(--font-weight-heading-3);
+  line-height: var(--line-height-heading-3);
+  color: var(--color-accent-blue);
+  text-align: center;
+}
+
+.contact-confirmation p span {
+  font-size: var(--font-label-1);
+  font-weight: var(--font-weight-label-1);
+  line-height: var(--line-height-label-1);
+  color: var(--color-black);
+}
+
+/* Progress bar */
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 0.4rem;
+  width: 100%;
+  background: var(--color-accent-blue); /* Same color as popup background */
+  animation: shrink 5s linear forwards; /* Animating for 8 seconds */
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
 /* ------------ Tablet design ------------ */
 @media (max-width: 1200px) {
   .contact-container {
@@ -1255,6 +1308,15 @@ nav ul li a:hover {
   .contact-form input,
   .contact-form textarea {
     padding: 1.25rem 1rem;
+  }
+
+  .contact-confirmation {
+    top: 1rem;
+    height: fit-content;
+    right: 50%;
+    transform: translateX(50%);
+    width: 90%;
+    padding: 1.2rem;
   }
 }
 
