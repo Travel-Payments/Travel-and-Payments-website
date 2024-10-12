@@ -625,6 +625,93 @@ nav ul li a:hover {
   }
 }
 
+/* ------------ About Section styles ------------ */
+.client-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+.client-section__clients {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 100%;
+  background-color: var(--color-accent-light-blue);
+  padding: 2rem;
+  border-radius: 16px;
+}
+.client-section__client {
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+}
+.client-section__client img {
+  width: 100%;
+  max-width: 13rem;
+  border-radius: 8px;
+  height: auto;
+}
+.client-section__client p {
+  font-size: var(--font-body-2);
+  font-weight: 600;
+  color: var(--color-grey-2);
+  text-align: center;
+}
+
+/* ------------ Tablet Landscape design ------------ */
+@media (max-width: 1024px) {
+  .client-section {
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+  }
+  .client-section__clients {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .client-section__client img {
+    max-width: 10rem;
+  }
+}
+/* ------------ Tablet Portrait design ------------ */
+@media (max-width: 900px) {
+  .client-section {
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+  }
+  .client-section__clients {
+    gap: 0.75rem;
+  }
+  .client-section__client img {
+    max-width: 12rem;
+  }
+}
+
+/* ------------ Mobile design ------------ */
+@media (max-width: 600px) {
+  .client-section__clients {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* ------------ Mobile design ------------ */
+@media (max-width: 400px) {
+  .client-section {
+    padding: 0 1rem;
+  }
+  .client-section__clients {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 /* ------------ Events Section styles ------------ */
 .event-section {
   width: 100%;
