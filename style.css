@@ -959,11 +959,10 @@ nav ul li a:hover {
 /* ------------ About Section styles ------------ */
 .about-section {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   align-items: center;
   gap: 4rem;
   padding: 6rem 7.5rem 7rem;
-  /* width: 100%; */
   width: min-content;
   margin: auto;
 }
@@ -972,7 +971,6 @@ nav ul li a:hover {
   height: fit-content;
   width: max-content;
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 1.25rem;
 }
 
@@ -1037,7 +1035,7 @@ nav ul li a:hover {
   display: inline-block;
   max-width: 100%;
   margin-top: 0.5rem;
-  margin-left: -0.15rem;
+  /* margin-left: -0.15rem; */
 }
 
 /* ------------ Mid-Desktop design ------------ */
