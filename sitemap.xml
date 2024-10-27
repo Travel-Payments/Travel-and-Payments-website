@@ -11,18 +11,21 @@
   </url>
 
   <!-- Example of Adding a New Page (e.g., 'About' page) -->
-  <!--
-  <url>
-    <!-- Page URL: replace "about" with the name of your new page -->
+
+  <!-- <url>
+    Page URL: replace "about" with the name of your new page
     <loc>https://travelandpayments.com/about</loc>
-    <!-- Last Modified Date: update this date to the latest update for the page -->
+
+    Last Modified Date: update this date to the latest update for the page
     <lastmod>2024-10-27T12:00:00+00:00</lastmod>
-    <!-- Optional - Change Frequency: tells search engines how often this page might change -->
+
+    Optional - Change Frequency: tells search engines how often this page might change
     <changefreq>monthly</changefreq>
-    <!-- Optional - Priority: sets the importance of this page relative to others (1.0 is highest) -->
+
+    Optional - Priority: sets the importance of this page relative to others (1.0 is highest)
     <priority>0.8</priority>
-  </url>
-  -->
+  </url> -->
+
   
   <!-- Template for Adding New Pages - Copy this block for each new page -->
   <!-- 
