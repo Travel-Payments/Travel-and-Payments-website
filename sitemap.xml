@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+              http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Homepage URL - Keep this as is -->
+  <url>
+    <loc>https://travelandpayments.com/</loc>
+    <lastmod>2024-10-26T16:00:16+00:00</lastmod>
+  </url>
+
+  <!-- Example of Adding a New Page (e.g., 'About' page) -->
+  <!--
+  <url>
+    <!-- Page URL: replace "about" with the name of your new page -->
+    <loc>https://travelandpayments.com/about</loc>
+    <!-- Last Modified Date: update this date to the latest update for the page -->
+    <lastmod>2024-10-27T12:00:00+00:00</lastmod>
+    <!-- Optional - Change Frequency: tells search engines how often this page might change -->
+    <changefreq>monthly</changefreq>
+    <!-- Optional - Priority: sets the importance of this page relative to others (1.0 is highest) -->
+    <priority>0.8</priority>
+  </url>
+  -->
+  
+  <!-- Template for Adding New Pages - Copy this block for each new page -->
+  <!-- 
+  <url>
+    <loc>https://travelandpayments.com/PAGE_NAME</loc>
+    <lastmod>YYYY-MM-DDTHH:MM:SS+00:00</lastmod>
+    <changefreq>optional_value</changefreq>
+    <priority>optional_value</priority>
+  </url>
+  -->
+  
+</urlset>
