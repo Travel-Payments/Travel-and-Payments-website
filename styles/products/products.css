@@ -1,0 +1,90 @@
+/* ------------------------ Base Classes ------------------------ */
+
+/* ------------ Tablet design ------------ */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 1.2rem;
+  }
+}
+
+/* ------------------------ Products Page ------------------------ */
+
+.wrapper {
+  position: relative;
+}
+.wrapper::before,
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.wrapper::before {
+  left: 0;
+  right: 50%;
+  background-color: var(--color-black);
+}
+.wrapper::after {
+  left: 50%;
+  right: 0;
+  background-color: var(--color-white);
+}
+.main-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.payments-censored-sec > h1,
+.rfp-template-sec > h1 {
+  font-family: "Montserrat", sans-serif;
+  /* font-size: var(--font-heading-1); */
+  font-size: clamp(1.75rem, 1.481vw + 1.417rem, 2.75rem);
+  line-height: var(--line-height-heading-1);
+  font-weight: var(--font-weight-heading-1);
+}
+
+.payments-censored-sec > p,
+.rfp-template-sec > p {
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+  /* font-size: var(--font-body-1); */
+  font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
+  line-height: var(--line-height-body-1);
+  font-weight: var(--font-weight-body-1);
+}
+.payments-censored-sec > a,
+.rfp-template-sec > a {
+  align-self: flex-start;
+}
+
+.payments-censored-sec {
+  flex: 1;
+  padding-top: 5.5rem;
+  padding-bottom: 3.5rem;
+  padding-right: 4rem;
+
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+}
+
+.rfp-template-sec {
+  flex: 1;
+
+  padding-block: 3.5rem;
+  padding-left: 4rem;
+
+  display: flex;
+  flex-direction: column;
+}
+.rfp-img {
+  width: 100%;
+  height: 20rem;
+  flex-shrink: 0;
+  background-color: var(--color-grey-6);
+  border-radius: 2rem;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}

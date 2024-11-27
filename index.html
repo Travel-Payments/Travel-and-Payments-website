@@ -20,7 +20,8 @@
       href="assets/icons/favicon.svg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/homepage/homepage.css" />
 
     <!-- ------------ all scripts here ------------ -->
     <script
@@ -49,17 +50,18 @@
         </div>
         <ul class="navlinks">
           <img class="nav-close" src="assets/icons/close.svg" alt="close nav" />
+          <li>
+            <a href="/products/" class="nav-link">Products</a>
+          </li>
           <li><a href="#serviceSection" class="nav-link">Services</a></li>
           <li><a href="#clientSection" class="nav-link">Clients</a></li>
           <li><a href="#eventSection" class="nav-link">Events</a></li>
           <li><a href="#communitySection" class="nav-link">Community</a></li>
           <li><a href="#aboutSection" class="nav-link">About</a></li>
           <li><a href="#contactSection" class="nav-link">Contact Us</a></li>
-          <a href="#contactSection"
-            ><button class="primary-button nav-button">
-              Book a Strategy Session
-            </button></a
-          >
+          <a class="primary-button nav-button" href="#contactSection">
+            Book a Strategy Session
+          </a>
         </ul>
         <img class="nav-menu" src="assets/icons/hamburger.svg" alt="open nav" />
       </div>
@@ -80,10 +82,8 @@
                 services to help you overcome payment challenges efficiently.
               </p>
             </div>
-            <a href="#contactSection">
-              <button class="hero-button primary-button">
-                Let's Brainstorm Together
-              </button>
+            <a class="hero-button primary-button" href="#contactSection">
+              Let's Brainstorm Together
             </a>
           </div>
           <img
@@ -332,10 +332,12 @@
               payments world.
             </p>
             <a
+              class="primary-button"
               href="https://forms.gle/kSdUSmxKLCvCFdCX6"
               target="_blank"
               rel="noopener noreferrer"
-              ><button class="primary-button">Join Our Community</button>
+            >
+              Join Our Community
             </a>
           </div>
         </div>
