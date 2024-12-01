@@ -1,0 +1,111 @@
+body {
+  background-color: var(--color-accent-light-blue);
+}
+.rfp-template__container {
+  width: fit-content;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  border-radius: 2rem;
+  background-color: var(--color-white);
+}
+
+.rfp-template__container > .main-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.rfp-template__content {
+  flex: 1.25;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+  color: var(--color-grey-1);
+  height: min(70vh, 43.75rem);
+}
+.rfp-template__content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(1.75rem, 1.481vw + 1.417rem, 2.75rem);
+  line-height: var(--line-height-heading-1);
+  font-weight: var(--font-weight-heading-1);
+}
+.rfp-template__content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.75rem;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-grey-6);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-grey-5);
+  cursor: grab;
+}
+
+.rfp-template__content li {
+  position: relative;
+  font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
+  line-height: var(--line-height-body-1);
+  font-weight: var(--font-weight-body-1);
+  margin-left: 2.125rem;
+}
+.rfp-template__content li::before {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 0.5rem;
+  top: 1rem;
+  left: -2.125rem;
+  background-image: url("/assets/icons/right-arrow-vector.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.rfp-template__img-wrapper {
+  flex: 1;
+  border-radius: 2rem;
+  background-color: var(--color-accent-light-blue);
+  overflow: hidden;
+
+  background-image: url("/assets/images/rfp-template-mockup.webp");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: 105%;
+}
+
+.rfp-template__img-wrapper__content {
+  display: flex;
+  width: fit-content;
+  --content-gap: 3.375rem;
+  gap: var(--content-gap);
+  padding: 1.25rem 2.5rem;
+  color: var(--color-grey-6);
+  background-color: var(--color-grey-2);
+  border-radius: 0 0 1.25rem 0;
+}
+.rfp-template__img-wrapper__content li {
+  position: relative;
+  font-size: clamp(1rem, 0.9167rem + 0.3704vw, 1.25rem);
+  line-height: var(--line-height-button-1);
+}
+.rfp-template__img-wrapper__content li + li {
+  position: relative;
+}
+.rfp-template__img-wrapper__content li + li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: var(--color-grey-6);
+  top: 50%;
+  left: calc(-1 * calc(3px + var(--content-gap) / 2));
+  transform: translateY(-50%);
+  border-radius: 50%;
+}

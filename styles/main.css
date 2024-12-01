@@ -115,7 +115,14 @@ strong {
   letter-spacing: 0.02em;
 }
 
+ul,
+ol,
+li {
+  list-style: none;
+}
+
 a {
+  display: inline-block;
   text-decoration: none;
 }
 li a:hover {
@@ -140,6 +147,7 @@ li a:hover {
 }
 
 .primary-button {
+  display: inline-block;
   font-size: var(--font-button-1);
   font-weight: var(--font-weight-button-1);
   padding: 1.25rem 1.5rem;
@@ -322,12 +330,12 @@ nav ul li a.active {
 /* ------------ Footer Section styles ------------ */
 footer {
   width: 100%;
-  height: 25px;
+  /* height: 25px; */
   box-shadow: -1rem -1rem 2rem rgba(72, 72, 72, 0.06);
+  background: var(--color-white);
 }
 
 .footer-container {
-  background: var(--color-white);
   max-width: 1440px;
   margin: auto;
   display: flex;
