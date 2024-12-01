@@ -1,12 +1,5 @@
 /* ------------------------ Base Classes ------------------------ */
 
-/* ------------ Tablet design ------------ */
-@media (max-width: 1024px) {
-  .main-container {
-    padding: 0 1.2rem;
-  }
-}
-
 /* ------------------------ Products Page ------------------------ */
 
 .wrapper {
@@ -39,7 +32,6 @@
 .payments-censored-sec > h1,
 .rfp-template-sec > h1 {
   font-family: "Montserrat", sans-serif;
-  /* font-size: var(--font-heading-1); */
   font-size: clamp(1.75rem, 1.481vw + 1.417rem, 2.75rem);
   line-height: var(--line-height-heading-1);
   font-weight: var(--font-weight-heading-1);
@@ -47,9 +39,7 @@
 
 .payments-censored-sec > p,
 .rfp-template-sec > p {
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
-  /* font-size: var(--font-body-1); */
+  margin-block: 0.5rem 2rem;
   font-size: clamp(1rem, 0.8333rem + 0.7407vw, 1.5rem);
   line-height: var(--line-height-body-1);
   font-weight: var(--font-weight-body-1);
@@ -61,8 +51,7 @@
 
 .payments-censored-sec {
   flex: 1;
-  padding-top: 5.5rem;
-  padding-bottom: 3.5rem;
+  padding-block: 5.5rem 3.5rem;
   padding-right: 4rem;
 
   display: flex;
@@ -85,20 +74,20 @@
   flex-direction: column;
 }
 .rfp-img {
-  position: relative;
   width: 100%;
   height: 20rem;
   flex-shrink: 0;
-  background-color: var(--color-accent-light-blue);
   border-radius: 2rem;
   overflow: hidden;
   margin-bottom: 2rem;
   overflow: hidden;
 
-  background-image: url("/assets/images/rfp-template-mockup.webp");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: 80%;
+  background: url("/assets/images/rfp-template-mockup.webp"),
+    url("/assets/vectors/rfp-img-circle.svg");
+  background-position: bottom -4rem right, top -4rem left -4rem;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 27rem, 400px;
+  background-color: var(--color-accent-light-blue);
 }
 
 /* ------------ Tablet design ------------ */
@@ -106,5 +95,44 @@
   .main-container {
     flex-direction: column;
     min-height: unset;
+  }
+
+  .wrapper::before,
+  .wrapper::after {
+    display: none;
+  }
+
+  .payments-censored-sec {
+    padding-block: 5rem 10rem;
+    padding-inline: 1.2rem;
+
+    background-image: url("/assets/images/payments-censored-mockup-sm.webp");
+    background-color: var(--color-black);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: 120%;
+  }
+
+  .rfp-template-sec {
+    padding-inline: 1.2rem;
+    background-color: var(--color-white);
+  }
+
+  .rfp-template-sec > p {
+    margin-block: 0.5rem 2rem;
+    width: 100%;
+    max-width: 60ch;
+  }
+}
+
+/* ------------ Mobile design ------------ */
+@media (max-width: 360px) {
+  .payments-censored-sec p > br {
+    display: none;
+  }
+
+  .rfp-img {
+    background-position: bottom -2rem right, top -4rem left -4rem;
+    background-size: min(25rem, 130%), 200px;
   }
 }
