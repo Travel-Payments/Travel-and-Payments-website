@@ -1,6 +1,11 @@
 body {
   background-color: var(--color-accent-light-blue);
 }
+
+.rfp-template__section {
+  padding: 0 2rem;
+}
+
 .rfp-template__container {
   width: fit-content;
   margin: 2.5rem auto;
@@ -37,13 +42,13 @@ body {
   padding-right: 0.75rem;
 }
 
-::-webkit-scrollbar {
+.rfp-template__content ul::-webkit-scrollbar {
   width: 0.4rem;
 }
-::-webkit-scrollbar-thumb {
+.rfp-template__content ul::-webkit-scrollbar-thumb {
   background-color: var(--color-grey-6);
 }
-::-webkit-scrollbar-thumb:hover {
+.rfp-template__content ul::-webkit-scrollbar-thumb:hover {
   background-color: var(--color-grey-5);
   cursor: grab;
 }
@@ -60,7 +65,7 @@ body {
   position: absolute;
   width: 1rem;
   height: 0.5rem;
-  top: 1rem;
+  top: clamp(0.5625rem, 0.4167rem + 0.6481vw, 1rem);
   left: -2.125rem;
   background-image: url("/assets/icons/right-arrow-vector.svg");
   background-size: cover;
@@ -82,10 +87,13 @@ body {
 
 .rfp-template__img-wrapper__content {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: fit-content;
-  --content-gap: 3.375rem;
+  --content-gap: clamp(2rem, 1.5417rem + 2.037vw, 3.375rem);
   gap: var(--content-gap);
-  padding: 1.25rem 2.5rem;
+  padding-block: clamp(0.875rem, 0.75rem + 0.5556vw, 1.25rem);
+  padding-inline: clamp(1rem, 0.5rem + 2.2222vw, 2.5rem);
   color: var(--color-grey-6);
   background-color: var(--color-grey-2);
   border-radius: 0 0 1.25rem 0;
@@ -108,4 +116,48 @@ body {
   left: calc(-1 * calc(3px + var(--content-gap) / 2));
   transform: translateY(-50%);
   border-radius: 50%;
+}
+
+/* ------------ Tablet design ------------ */
+@media (max-width: 1024px) {
+  body {
+    background-color: var(--color-white);
+  }
+
+  .rfp-template__section {
+    padding: 0;
+  }
+
+  .rfp-template__container {
+    width: 100%;
+    margin: 1.5rem auto;
+    padding: 0 clamp(1rem, 0.6667rem + 1.4815vw, 2rem);
+  }
+
+  .rfp-template__container > .main-container {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+
+  .rfp-template__content {
+    height: unset;
+  }
+
+  .rfp-template__img-wrapper {
+    min-height: clamp(22.5rem, 17.756rem + 21.0843vw, 31.25rem);
+
+    border-radius: 1rem;
+
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: clamp(20.5rem, 12.6386rem + 34.9398vw, 35rem);
+  }
+}
+
+/* ------------ Mobile design ------------ */
+@media (max-width: 360px) {
+  .rfp-template__img-wrapper__content {
+    width: 100%;
+    border-radius: 0;
+  }
 }
