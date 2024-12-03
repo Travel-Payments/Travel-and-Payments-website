@@ -2,10 +2,17 @@ body {
   background-color: var(--color-white);
 }
 
+/* ------------ Tablet design ------------ */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 clamp(1rem, 0.9429rem + 0.2857vw, 1.2rem);
+  }
+}
+
 /* =============== payments-censored__container */
 .payments-censored__container {
   display: grid;
-  gap: 3rem;
+  gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
   padding-block: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
   grid-template-areas:
     "payments-censored__item-1"
@@ -37,7 +44,7 @@ body {
 /* =============== payments-censored__item-1 */
 .payments-censored__item-1 {
   display: grid;
-  gap: 3rem;
+  gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
   grid-template-areas:
     "payments-censored__subitem-1 payments-censored__subitem-3"
     "payments-censored__subitem-2 payments-censored__subitem-3";
@@ -101,7 +108,7 @@ body {
 /* =============== payments-censored__item-2 */
 .payments-censored__item-2 {
   display: flex;
-  gap: 3rem;
+  gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
 }
 .payments-censored__item-2 .payments-censored__subitem-1 {
   flex: 1;
@@ -126,7 +133,7 @@ body {
   background-size: cover;
 }
 
-/* =============== payments-censored__item-2 */
+/* =============== payments-censored__item-3 */
 .payments-censored__item-3 .payments-censored__subitem-1 {
   display: flex;
   flex-direction: column;
@@ -140,12 +147,28 @@ body {
 .payments-censored__item-3
   .payments-censored__subitem-1
   a:not(.primary-button) {
+  position: relative;
   color: var(--color-accent-blue);
   text-decoration: underline;
 
   font-size: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
   font-weight: 400;
   line-height: 1.8;
+}
+.payments-censored__item-3
+  .payments-censored__subitem-1
+  a:not(.primary-button)::before {
+  position: absolute;
+  content: "";
+  width: 1rem;
+  height: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: calc(100% + 1rem);
+  background-image: url("/assets/icons/right-arrow-vector.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .payments-censored__item-3 .payments-censored__subitem-1 h4 {
   color: var(--color-grey-2);
@@ -155,4 +178,97 @@ body {
   line-height: 1.55;
   margin-top: 1rem;
   margin-bottom: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+}
+.payments-censored__item-3 .payments-censored__subitem-1 .primary-button {
+  min-width: 15rem;
+}
+
+/* ------------ Mobile design ------------ */
+@media (max-width: 360px) {
+  .payments-censored__item-3
+    .payments-censored__subitem-1
+    a:not(.primary-button)::before {
+    width: 0.8rem;
+    height: 0.5rem;
+  }
+}
+
+/* =============== payments-censored__item-4 */
+.payments-censored__item-4 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22.875rem, 1fr));
+  gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
+}
+.payments-censored__item-4 > * {
+  padding: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.12);
+  border-radius: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  background-color: var(--color-white);
+}
+.payments-censored__item-4 > * > h6 {
+  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+  font-weight: 700;
+  line-height: normal;
+}
+.payments-censored__item-4 > * > p {
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+}
+.payments-censored__item-4 > * > .payments-censored__review-rating {
+  display: block;
+  margin-block: 0.5rem;
+}
+.payments-censored__item-4 > * > .payments-censored__company-logo {
+  display: block;
+  margin-top: clamp(1.125rem, 0.4643rem + 3.3036vw, 3.4375rem);
+}
+
+/* =============== payments-censored__item-4 */
+.payments-censored__item-5 {
+  display: grid;
+  gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
+  grid-template-areas:
+    "payments-censored__subitem-1 payments-censored__subitem-2"
+    "payments-censored__subitem-3 payments-censored__subitem-3";
+}
+.payments-censored__item-5 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.payments-censored__item-5 .payments-censored__subitem-1 {
+  grid-area: payments-censored__subitem-1;
+  max-height: clamp(21rem, 16.2857rem + 23.5714vw, 37.5rem);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+.payments-censored__item-5 .payments-censored__subitem-2 {
+  grid-area: payments-censored__subitem-2;
+  max-height: clamp(21rem, 16.2857rem + 23.5714vw, 37.5rem);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+.payments-censored__item-5 .payments-censored__subitem-3 {
+  grid-area: payments-censored__subitem-3;
+  max-height: clamp(18.75rem, 13.3929rem + 26.7857vw, 37.5rem);
+  border-radius: 2.5rem;
+  overflow: hidden;
+}
+
+/* =============== payments-censored__item-6 */
+.payments-censored__item-6 .payments-censored__subitem-1 {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.25rem, 0.8929rem + 1.7857vw, 2.5rem);
+  color: var(--color-grey-2);
+  background-color: var(--color-accent-light-blue);
+
+  padding: clamp(1rem, 0.6429rem + 1.7857vw, 2.25rem)
+    clamp(1rem, 0.4286rem + 2.8571vw, 3rem);
+  border-radius: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
+  font-size: clamp(0.875rem, 0.6964rem + 0.8929vw, 1.5rem);
+  font-weight: 400;
+  line-height: 1.8;
 }

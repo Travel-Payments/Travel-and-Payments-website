@@ -64,7 +64,7 @@ body {
   content: "";
   position: absolute;
   width: 1rem;
-  height: 0.5rem;
+  height: 0.625rem;
   top: clamp(0.5625rem, 0.4167rem + 0.6481vw, 1rem);
   left: -2.125rem;
   background-image: url("/assets/icons/right-arrow-vector.svg");
@@ -159,5 +159,10 @@ body {
   .rfp-template__img-wrapper__content {
     width: 100%;
     border-radius: 0;
+  }
+
+  .rfp-template__content li::before {
+    width: 0.8rem;
+    height: 0.5rem;
   }
 }
