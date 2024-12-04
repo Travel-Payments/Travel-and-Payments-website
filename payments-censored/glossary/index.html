@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Payments consulting firm in Singapore, led by certified payments experts Vishal Mehta, SheueChee Beh, and Kanika Mittal. With 50+ years of experience, we specialize in B2B payments, risk payments, merchant payments, and cross-country payment solutions."
+    />
+    <meta
+      name="keywords"
+      content="Payments consulting, payments strategy, payments experts, B2B payments solutions, B2B payments, risk payments, merchant payments, cross-country payment solutions, certified payments experts"
+    />
+    <title>
+      Travel and Payments - Payment Solutions for Merchants, Payment Companies,
+      and Investors
+    </title>
+    <link
+      rel="shortcut icon"
+      href="/assets/icons/favicon.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="/payments-censored/glossary/styles/glossary.css"
+    />
+
+    <!-- ------------ all scripts here ------------ -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script defer src="/script.js"></script>
+    <script defer src="/payments-censored/glossary/js/glossary.js"></script>
+  </head>
+
+  <body>
+    <!-- ================ Navbar Starts ================ -->
+    <nav>
+      <div class="nav-container">
+        <div class="logo">
+          <a href="/">
+            <img
+              src="/assets/vectors/logoBlack.svg"
+              alt="travel and payments"
+            />
+          </a>
+        </div>
+        <ul class="navlinks">
+          <img
+            class="nav-close"
+            src="/assets/icons/close.svg"
+            alt="close nav"
+          />
+          <li>
+            <a href="/products" class="nav-link active">Products</a>
+          </li>
+          <li>
+            <a href="/#serviceSection" class="nav-link">Services</a>
+          </li>
+          <li>
+            <a href="/#clientSection" class="nav-link">Clients</a>
+          </li>
+          <li>
+            <a href="/#eventSection" class="nav-link">Events</a>
+          </li>
+          <li>
+            <a href="/#communitySection" class="nav-link">Community</a>
+          </li>
+          <li>
+            <a href="/#aboutSection" class="nav-link">About</a>
+          </li>
+          <li>
+            <a href="/#contactSection" class="nav-link">Contact Us</a>
+          </li>
+          <a href="/#contactSection"
+            ><button class="primary-button nav-button">
+              Book a Strategy Session
+            </button></a
+          >
+        </ul>
+        <img
+          class="nav-menu"
+          src="/assets/icons/hamburger.svg"
+          alt="open nav"
+        />
+      </div>
+    </nav>
+    <div class="overlay"></div>
+    <!-- ================ Navbar Ends ================ -->
+
+    <!-- ================ Main Container Starts ================ -->
+    <!-- Filter Button & Popup -->
+    <div id="pc-filter-button-container" class="pc-filter-button-container">
+      <button id="pc-filter-button" class="primary-button">
+        Filter by category
+      </button>
+      <div id="pc-filter-popup" class="pc-filter-popup">
+        <form id="pc-filter-form" class="pc-filter-form">
+          <!-- Dynamically generated radio buttons will be injected here -->
+        </form>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <!-- Glossary List -->
+      <section class="pc-glossary">
+        <section
+          id="authorization-authentication"
+          class="pc-glossary__category"
+        >
+          <header>
+            <h2>Authorization & Authentication</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>Strong Customer Authentication (SCA)</h3>
+              <p>
+                A European regulatory requirement under PSD2 that mandates
+                multi-factor authentication for online payments, such as
+                combining a password with a fingerprint. This aims to enhance
+                security and reduce fraud in digital transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Dynamic Authentication</h3>
+              <p>
+                An adaptive security process that adjusts the authentication
+                method based on the perceived risk of a transaction or user
+                behavior. A higher-risk transaction may trigger multi-factor
+                authentication, while a routine login might not.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Authorization Hold</h3>
+              <p>
+                A temporary hold placed on funds by a merchant to ensure
+                sufficient funds are available to cover a transaction, typically
+                in card payments. For example, hotels or car rentals place holds
+                for security deposits.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payment Authentication / AuthN</h3>
+              <p>
+                The process of verifying a customer’s identity during a payment
+                transaction to ensure that the person initiating the transaction
+                is authorized. It commonly involves methods like passwords,
+                biometrics, or multi-factor authentication (MFA).
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payment Authorization / AuthZ</h3>
+              <p>
+                The process of approving a payment transaction, ensuring that
+                the customer has sufficient funds or credit and that the
+                transaction meets security requirements, such as fraud
+                prevention, compliance checks, and cardholder verification
+                steps.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>3D Secure</h3>
+              <p>
+                An authentication protocol that adds an additional security
+                layer for online credit and debit card transactions, requiring
+                the cardholder to complete an extra verification step, such as
+                entering a one-time password or biometric authentication,
+                enhancing fraud prevention.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Authorization Code</h3>
+              <p>
+                A unique, time-sensitive code generated by the issuing bank
+                during a payment transaction to confirm that the authorization
+                request has been approved. It validates the merchant’s ability
+                to charge the customer's account.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Access Control Server (ACS)</h3>
+              <p>
+                A crucial component in the 3D Secure protocol. It facilitates
+                secure authentication between the cardholder, issuing bank, and
+                merchant, ensuring the cardholder's identity is verified during
+                online transactions to prevent fraud.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Authorization Network</h3>
+              <p>
+                The system that routes payment authorization requests from the
+                merchant to the cardholder's issuing bank, typically involving
+                intermediaries like payment processors and card networks, such
+                as Visa and Mastercard, ensuring secure transaction approval.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="emerging-technologies-trends"
+          class="pc-glossary__category"
+        >
+          <header>
+            <h2>Emerging Technologies & Trends</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>FinTech</h3>
+              <p>
+                Innovative technologies that improve and automate financial
+                services, enhancing efficiency, accessibility, and user
+                experience in the finance industry. It includes solutions like
+                digital payments, peer-to-peer lending, robo-advisors, and
+                blockchain technology, transforming traditional financial
+                operations.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Embedded Finance</h3>
+              <p>
+                The integration of financial services into non-financial
+                platforms or products, enabling companies to seamlessly offer
+                banking, lending, or payment solutions directly within their
+                existing customer interfaces, enhancing user experience and
+                streamlining transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>BaaS (Banking as a Service)</h3>
+              <p>
+                A model where fintech companies and various businesses leverage
+                APIs from traditional banks to offer banking services,
+                facilitating seamless integration of financial products and
+                services via third-party platforms, enhancing customer
+                experiences.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payments Optimisation</h3>
+              <p>
+                Strategies and technologies used to enhance the efficiency,
+                cost-effectiveness, and success rates of payment processing.
+                This involves smart routing of transactions and robust fraud
+                prevention measures to minimize declines and improve customer
+                experience.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Financial Inclusion</h3>
+              <p>
+                Efforts to ensure that individuals and businesses, particularly
+                those underserved by traditional financial institutions, can
+                access affordable and secure financial services. This includes
+                banking, credit, insurance, and investment opportunities,
+                promoting economic empowerment and stability.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Unified Commerce</h3>
+              <p>
+                An integrated approach to commerce that ensures a seamless
+                customer experience across all channels, including physical
+                stores, online platforms, and mobile devices, allowing
+                businesses to deliver consistent messaging, personalized
+                interactions, and streamlined transactions for enhanced customer
+                satisfaction.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>E-commerce Marketplace</h3>
+              <p>
+                An online platform that connects multiple sellers with
+                customers, enabling them to showcase and sell products or
+                services. These platforms facilitate transactions, often
+                providing integrated payment processing, inventory management,
+                and customer support services.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="merchant-acquirer-services" class="pc-glossary__category">
+          <header>
+            <h2>Merchant & Acquirer Services</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>Acquirers / Acquiring Bank</h3>
+              <p>
+                Financial institutions that process credit and debit card
+                transactions on behalf of merchants. They handle authorization,
+                settlement, and transfer of funds, ensuring seamless payment
+                processing and risk management for businesses.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant Services</h3>
+              <p>
+                Financial services enable businesses to accept and process
+                payments efficiently. This includes credit card processing,
+                point-of-sale systems, and payment gateways, facilitating
+                seamless transactions both in-store and online for improved
+                customer experience.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant Agreement</h3>
+              <p>
+                A contract between a merchant and an acquiring bank or payment
+                processor, outlining the terms and conditions for processing
+                transactions, including fees, chargebacks, compliance
+                requirements, and transaction handling protocols to ensure
+                secure operations.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant Category Code (MCC)</h3>
+              <p>
+                A four-digit code assigned to merchants by credit card networks,
+                categorizing their business type and transactions. It plays a
+                crucial role in determining transaction fees, risk assessment,
+                and rewards program eligibility.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant Discount Rate</h3>
+              <p>
+                The fee charged to a merchant by the acquiring bank or payment
+                processor for processing card payments. This fee, usually a
+                percentage of each transaction, covers transaction processing,
+                payment gateway costs, and associated risk.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant of Record</h3>
+              <p>
+                The entity is responsible for processing payments, maintaining
+                the merchant account, managing financial liability for
+                chargebacks and refunds, ensuring compliance with payment
+                regulations, and handling customer transactions for e-commerce
+                operations.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant Plug-in</h3>
+              <p>
+                A specialized software that enables merchants to seamlessly
+                integrate payment processing capabilities into their websites or
+                applications, facilitating secure online transactions, enhancing
+                customer experience, and supporting various payment methods for
+                increased flexibility.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Merchant Initiated Transaction (MIT)</h3>
+              <p>
+                A payment transaction initiated by the merchant rather than the
+                customer, often used for recurring payments or subscriptions,
+                allowing automatic billing without requiring additional customer
+                authorization each time.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Fulfilment</h3>
+              <p>
+                The process of completing a customer's order, which includes not
+                only packaging, shipping, and delivery of goods, but also
+                inventory management and tracking, often seamlessly integrated
+                with payment processing for efficiency and accuracy.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>ISO (Independent Sales Organization)</h3>
+              <p>
+                A third-party company that partners with acquiring banks to
+                facilitate merchant accounts and payment processing services,
+                offering businesses tailored solutions for payment acceptance,
+                including transaction management and customer support.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="payment-infrastructure-networks"
+          class="pc-glossary__category"
+        >
+          <header>
+            <h2>Payment Infrastructure, Networks & Schemes</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>Four Party Card Schemes</h3>
+              <p>
+                A payment model involving four entities: the cardholder, the
+                issuing bank, the merchant, and the acquiring bank. This
+                framework facilitates transactions, with major card networks
+                like Visa and Mastercard ensuring secure processing and
+                communication among them.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>ISO 2022</h3>
+              <p>
+                An international messaging standard for financial institutions,
+                facilitating the secure exchange of financial information across
+                borders in a standardized format. It enhances interoperability,
+                reduces errors, and streamlines global transactions by promoting
+                consistency in messaging protocols.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>National Payment Switch</h3>
+              <p>
+                A centralized infrastructure, enabling seamless interbank
+                exchanges of electronic payment transactions within a country.
+                Typically managed by the central bank, it enhances efficiency,
+                security, and interoperability among various financial
+                institutions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>ACH</h3>
+              <p>
+                A network that processes electronic financial transactions in
+                the United States, facilitating direct deposits like payroll,
+                bill payments, and other automated transfers, ensuring secure
+                and efficient money movement between bank accounts.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>EFTPOS (Electronic Funds Transfer at Point of Sale)</h3>
+              <p>
+                A payment system that enables customers to pay for goods or
+                services directly from their bank account at the point of sale
+                using a debit or credit card, ensuring secure transactions and
+                immediate fund transfers.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>ATM (Automated Teller Machine)</h3>
+              <p>
+                A self-service machine that allows bank customers to perform
+                basic transactions, such as withdrawing cash, checking balances,
+                and transferring funds, without the need for a teller, enhancing
+                convenience and accessibility.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payment Terminal</h3>
+              <p>
+                A specialized device used by merchants to securely accept
+                payments from customers. It typically supports various payment
+                methods, including card transactions, NFC (Near Field
+                Communication), and mobile wallets, ensuring efficient and
+                versatile payment processing.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>EDC (Electronic Data Capture) Terminal</h3>
+              <p>
+                A specialized device used by merchants to securely capture and
+                transmit payment card information electronically. Typically
+                utilized at the point of sale, it ensures efficient, real-time
+                processing of transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>PIN Pad</h3>
+              <p>
+                A secure device that allows cardholders to enter their personal
+                identification number (PIN) during a payment transaction. It is
+                typically integrated with payment terminals, ensuring that
+                sensitive information is encrypted and protected from
+                unauthorized access.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>NFC (Near Field Communication)</h3>
+              <p>
+                A specialized device used by merchants to securely capture and
+                transmit payment card information electronically. Typically
+                utilized at the point of sale, it ensures efficient, real-time
+                processing of transactions, enhancing customer convenience and
+                reducing transaction times.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>TID (Terminal Identification)</h3>
+              <p>
+                A unique identifier assigned to each payment terminal or
+                point-of-sale device, enabling merchants and processors to track
+                transactions, manage terminal configurations, and ensure secure
+                communication within payment networks effectively.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Network Token</h3>
+              <p>
+                A digital representation of a card's primary account number
+                (PAN), replacing the actual card number to enhance security in
+                online and mobile transactions, reducing fraud risk and
+                safeguarding sensitive payment information during processing.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>BIN (Bank Identification Number)</h3>
+              <p>
+                The first six digits of a payment card number. It uniquely
+                identifies the issuing bank or institution, allowing payment
+                processors to accurately route transactions and mitigate fraud.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>BIN Sponsor</h3>
+              <p>
+                A financial institution that partners with entities, such as
+                fintech companies, allowing them to utilize its Bank
+                Identification Number (BIN). This enables the issuance of
+                payment cards and the processing of transactions, facilitating
+                seamless financial services.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Dynamic Descriptor</h3>
+              <p>
+                A feature that allows merchants to customize the description
+                appearing on a cardholder's statement. This capability helps
+                clarify the nature of the transaction, enhancing transparency
+                and reducing chargebacks by providing specific details.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Card Issuance</h3>
+              <p>
+                The process by which financial institutions produce and
+                distribute payment cards, such as credit, debit, and prepaid
+                cards to customers. This includes designing the cards,
+                personalizing them with account information, and ensuring secure
+                delivery.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Cardholder</h3>
+              <p>
+                An individual issued a payment card, such as a credit or debit
+                card, by a financial institution. They are authorized to use
+                this card for various transactions, including purchases and cash
+                withdrawals.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Account Updater</h3>
+              <p>
+                A service that automatically updates stored card information for
+                recurring payments when a card is reissued or replaced. This
+                proactive approach minimizes payment failures, ensuring
+                uninterrupted services and enhancing customer satisfaction by
+                streamlining the payment process.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Non-Bank Financial Institution</h3>
+              <p>
+                A financial entity that provides certain banking services, such
+                as lending and investments, but does not hold a full banking
+                license or accept deposits from the public, often focusing on
+                niche markets.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payment Facilitator</h3>
+              <p>
+                An entity that allows smaller merchants to accept payments by
+                processing transactions under a single master merchant account.
+                This structure streamlines the onboarding process, reducing time
+                and complexity for merchants to start accepting payments
+                efficiently.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Mastercard Wholesale Program</h3>
+              <p>
+                A specialized initiative that offers select merchants and
+                industries a reduced rate of interchange fees, enhanced
+                transaction processing efficiency, and additional resources
+                aimed at optimizing payment solutions and driving growth within
+                their sectors.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="payment-methods-instruments" class="pc-glossary__category">
+          <header>
+            <h2>Payment Methods & Instruments</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>Cryptocurrency</h3>
+              <p>
+                A decentralized digital currency secured by cryptography, making
+                it nearly impossible to counterfeit. Examples include Bitcoin
+                and Ethereum, which operate on blockchain technology without the
+                need for intermediaries like banks.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>E-Wallet</h3>
+              <p>
+                An e-wallet is an electronic device or online service that
+                enables users to make electronic transactions, often linked to
+                their bank account or credit card. For example, apps like PayPal
+                or Apple Pay store payment information securely for quick
+                access.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Alternative Payment Methods</h3>
+              <p>
+                Payment options that differ from traditional credit and debit
+                cards. These include digital wallets like Apple Pay, bank
+                transfers, and emerging technologies like cryptocurrencies,
+                offering consumers more flexible and secure transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payment Card</h3>
+              <p>
+                A card issued by a financial institution, enables cardholders to
+                make purchases or withdraw funds. Examples include credit cards
+                that allow borrowing, debit cards linked to checking accounts,
+                and prepaid cards loaded with a specific amount.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Programmable Money</h3>
+              <p>
+                A digital money that can be programmed with conditions, rules,
+                and logic to automate its use. It can release payments only when
+                specific contract terms are met, often using blockchain-based
+                smart contracts.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>CBDC (Central Bank Digital Currency)</h3>
+              <p>
+                A digital version of a country's national currency, issued and
+                controlled by its central bank. Unlike cryptocurrencies, it
+                carries the same backing as physical cash and bank reserves.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Tap to Pay</h3>
+              <p>
+                A contactless payment method where a card or mobile device with
+                NFC technology is tapped near a point-of-sale terminal to
+                complete a transaction, enabling fast, secure payments without
+                inserting or swiping a card.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Buy Now Pay Later</h3>
+              <p>
+                A financing option that allows consumers to make purchases and
+                pay for them over time, often interest-free, without using a
+                credit card. Popular Buy Now Pay Later vendors include Afterpay,
+                Klarna, Affirm, and Zip.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Cash on Delivery</h3>
+              <p>
+                A payment method where the customer pays for a product or
+                service upon delivery rather than in advance. For example, a
+                customer orders a package online and pays the delivery driver in
+                cash upon receipt.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Card Present</h3>
+              <p>
+                It occurs when the physical payment card is swiped, tapped, or
+                inserted at a point of sale, like a retail store or restaurant,
+                allowing for real-time authorization and often enhanced security
+                measures.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Card on File</h3>
+              <p>
+                A service where a merchant securely stores a customer's payment
+                card information for future transactions, facilitating
+                convenience in repeat purchases, such as automatic billing for
+                subscription services like streaming or monthly deliveries.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Real-Time Payment</h3>
+              <p>
+                A payment method where transactions are processed and settled
+                almost instantly, providing immediate funds availability to the
+                recipient, enhancing cash flow and facilitating quick
+                transactions for urgent needs.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Recurring Payment</h3>
+              <p>
+                A method where a customer authorizes a merchant to automatically
+                charge their card or account on a regular basis, usually for
+                subscription services like streaming platforms or software
+                licenses, ensuring seamless billing without manual intervention.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Recurring Billing</h3>
+              <p>
+                A process of automatically charging a customer at set intervals
+                for ongoing products or services, such as subscriptions to
+                software, gym memberships, or magazine deliveries, ensuring
+                convenience and consistent revenue.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Bill of Exchange</h3>
+              <p>
+                A written, unconditional order directing the drawee to pay a
+                fixed sum to another party the payee on a specified future date,
+                such as for settling commercial transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Electronic Bill Presentment and Payment (EBPP)</h3>
+              <p>
+                A service that enables businesses to present bills to customers
+                electronically via email or online portals, allowing customers
+                to view, manage, and pay those bills securely online, improving
+                efficiency and convenience.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Cross-Border Payment</h3>
+              <p>
+                A transaction between parties in different countries, such as a
+                consumer purchasing goods from an overseas seller. This
+                typically involves currency conversion and may incur additional
+                fees like transaction or foreign exchange fees.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Dynamic Currency Conversion (DCC)</h3>
+              <p>
+                A service that allows international cardholders to pay in their
+                home currency rather than the local currency at the point of
+                sale, providing convenience and transparency regarding exchange
+                rates during transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Multi-Currency Pricing</h3>
+              <p>
+                A service that allows merchants to display prices and accept
+                payments in multiple currencies, providing convenience for
+                international customers. This enhances the shopping experience
+                by reducing conversion uncertainty and fostering customer trust.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Mail Order/Telephone Order (MOTO)</h3>
+              <p>
+                A service that allows merchants to display prices and accept
+                payments in multiple currencies, providing convenience for
+                international customers. This enables transactions without
+                requiring customers to be physically present, enhancing global
+                sales opportunities.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="pricing-fees" class="pc-glossary__category">
+          <header>
+            <h2>Pricing & Fees</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>Interchange+ / IC+ / IC++</h3>
+              <p>
+                Pricing models for processing fees that transparently pass the
+                interchange fee set by card networks directly to merchants.
+                These models also include an additional markup or fixed fee,
+                simplifying cost structures and enhancing pricing clarity for
+                merchants.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Interchange Reimbursement Fees</h3>
+              <p>
+                Fees paid by the acquiring bank to the issuing bank during a
+                card transaction. It typically covers the cost of processing,
+                fraud risk, and potential chargebacks associated with the
+                transaction.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Earning Credit Rate (ECR)</h3>
+              <p>
+                A rate used by banks to calculate the value of a business's
+                account balance, effectively offsetting fees for banking
+                services by allowing funds to earn interest or credits against
+                service charges.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="security-compliance-risk" class="pc-glossary__category">
+          <header>
+            <h2>Security, Compliance & Risk Management</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>PCI DSS</h3>
+              <p>
+                A comprehensive framework of security standards aimed at
+                ensuring that all companies accepting, processing, storing, or
+                transmitting credit card information maintain a secure
+                environment to protect sensitive data from breaches.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>PCI SAQ (Self Assessment Questionnaire)</h3>
+              <p>
+                A validation tool designed for merchants and service providers.
+                It allows them to demonstrate compliance with PCI DSS by
+                answering specific questions regarding their payment security
+                practices and ensuring proper safeguarding of cardholder data.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>PCI PA-DSS (Payment Application Data Security Standard)</h3>
+              <p>
+                A security standard specifically designed for payment
+                applications. It ensures that software used in processing
+                payments adheres to rigorous security protocols, safeguarding
+                cardholder data and maintaining compliance with PCI DSS
+                requirements.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>
+                PCI SSC (Payment Card Industry Security Standards Council)
+              </h3>
+              <p>
+                An independent body that develops and manages the PCI DSS,
+                overseeing the global adoption and enforcement of payment card
+                security standards. It collaborates with stakeholders to enhance
+                payment data security, ensuring consumer protection against
+                fraud.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>KYC (Know Your Customer)</h3>
+              <p>
+                A process where businesses verify the identity of their
+                customers through documentation and risk assessment to comply
+                with legal requirements, prevent fraud, and ensure they are
+                engaging with legitimate individuals or entities.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Credit Limit</h3>
+              <p>
+                The maximum amount of credit that a financial institution
+                extends to a borrower. This limit is determined by evaluating
+                the borrower's creditworthiness, income, debt-to-income ratio,
+                and overall financial stability.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Collateral</h3>
+              <p>
+                An asset pledged by a borrower to secure a loan or credit. This
+                can include property, vehicles, or other valuables, which the
+                lender can seize if the borrower defaults on repayment,
+                mitigating their risk.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>AVS (Address Verification Service)</h3>
+              <p>
+                A fraud prevention tool that cross-verifies the billing address
+                provided by the cardholder with the address on file at the
+                issuing bank, helping merchants identify and reduce fraudulent
+                transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Encryption</h3>
+              <p>
+                The process of converting information or data into a code,
+                especially to prevent unauthorized access. This technique
+                employs algorithms to transform readable data into unreadable
+                formats, ensuring confidentiality and integrity in securing
+                payment transactions and sensitive information.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Dynamic CVV</h3>
+              <p>
+                A security feature where the card verification value (CVV) on a
+                payment card is dynamically generated for each transaction,
+                enhancing security against fraud by ensuring that even if the
+                CVV is intercepted, it becomes unusable for future transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>EMV Transaction</h3>
+              <p>
+                A payment process utilizing EMV chip technology, which enhances
+                security by generating a unique code for each transaction. This
+                code prevents fraud, making it difficult to clone cards and
+                ensuring safer consumer payments.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Chargeback</h3>
+              <p>
+                A transaction reversal initiated by the cardholder's bank,
+                typically due to a dispute, fraud, or unauthorized transactions.
+                This process compels the merchant to refund the transaction
+                amount, impacting their financial standing and reputation.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Chargeback Prevention</h3>
+              <p>
+                Techniques and services aimed at reducing the occurrence of
+                chargebacks, where a cardholder disputes a transaction and
+                requests a refund from the issuing bank, ultimately safeguarding
+                merchants from potential revenue loss and reputational damage.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Counterparty Credit Risk</h3>
+              <p>
+                The risk that the other party in a financial transaction will
+                not fulfill their obligations, potentially leading to financial
+                loss. This risk is particularly significant in derivatives and
+                other complex instruments, where exposure can vary greatly.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Fraud Prevention</h3>
+              <p>
+                A range of strategies and tools designed to detect and thwart
+                fraudulent activities, particularly in financial transactions.
+                This includes utilizing AI algorithms to continuously monitor
+                transactions for unusual patterns, flagging anomalies for
+                further investigation.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>False Positive</h3>
+              <p>
+                In fraud detection, a false positive occurs when a legitimate
+                transaction is mistakenly flagged as fraudulent, resulting in
+                unnecessary declines and potential customer dissatisfaction,
+                loss of sales, and increased scrutiny of future transactions by
+                the customer.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>SSL Certificate</h3>
+              <p>
+                A digital certificate that provides authentication for a website
+                and enables an encrypted connection. This ensures secure data
+                transmission between the server and the user's browser,
+                protecting sensitive information from interception.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>HSM (Hardware Security Module)</h3>
+              <p>
+                A physical device that manages digital keys and provides
+                cryptographic services, ensuring secure payment transactions and
+                data protection by safeguarding sensitive information and
+                performing encryption, decryption, and authentication processes
+                securely.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>PCI Penetration Testing</h3>
+              <p>
+                A security test conducted to identify vulnerabilities in payment
+                systems by simulating potential attacks. It ensures compliance
+                with PCI DSS standards, helping organizations protect sensitive
+                cardholder data from breaches and cyber threats.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>EMV Liability Shift</h3>
+              <p>
+                A policy shift where liability for fraudulent transactions
+                transfers to the issuer, acquirer, or merchant that is least
+                EMV-compliant, thus incentivizing the adoption of EMV chip
+                technology to enhance transaction security. This shift
+                encourages stakeholders to upgrade their systems, fostering a
+                more secure payment environment and reducing overall fraud risk.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Counter Terrorist Financing</h3>
+              <p>
+                Regulations and practices designed to prevent the exploitation
+                of financial systems for terrorist activities, often emphasizing
+                Know Your Customer (KYC) procedures and transaction monitoring
+                to detect suspicious financial behavior and mitigate risks.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="transaction-processing" class="pc-glossary__category">
+          <header>
+            <h2>Transaction Processing</h2>
+          </header>
+          <div class="pc-glossary__items">
+            <div class="pc-glossary__item">
+              <h3>Payment Processor</h3>
+              <p>
+                A payment processor is a company that facilitates the processing
+                of payment transactions between merchants, acquiring banks, and
+                issuing banks, ensuring secure, efficient transfer of funds
+                while managing transaction data and compliance with financial
+                regulations.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Payment Gateway</h3>
+              <p>
+                A technology used by merchants to securely accept debit or
+                credit card purchases from customers. It facilitates the
+                transfer of transaction information to the payment processor,
+                ensuring authorization, data encryption, and fraud detection
+                during transactions.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Transaction Processing</h3>
+              <p>
+                The handling of payment transactions, covering authorization to
+                verify funds, settlement for transferring money, and clearing to
+                finalize the transaction, ensuring secure, timely completion
+                from the moment a transaction is initiated to when it concludes.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Batch Processing</h3>
+              <p>
+                A method of processing transactions in bulk at a scheduled time,
+                rather than in real-time. This approach optimizes efficiency,
+                reduces costs, and is commonly used in settlement processes,
+                payroll, and data backups.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Batch Settlement</h3>
+              <p>
+                The process of settling a batch of payment transactions,
+                typically conducted at the end of a business day, where funds
+                are aggregated and transferred from one bank to another for
+                efficient processing. This method helps streamline transaction
+                management and ensure timely fund availability.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Gross & Nett Settlement</h3>
+              <p>
+                Gross settlement refers to the transfer of funds where each
+                transaction is settled individually, ensuring immediate and
+                finality of payment. In contrast, net settlement combines
+                multiple transactions, calculating the net amount owed, reducing
+                the number of actual fund transfers.
+              </p>
+            </div>
+            <div class="pc-glossary__item">
+              <h3>Smart Routing</h3>
+              <p>
+                A payment processing feature that optimizes the routing of
+                transactions across multiple processors, allowing businesses to
+                reduce costs, improve approval rates, and ensure compliance with
+                specific regulatory or operational requirements by dynamically
+                selecting the best route for each transaction.
+              </p>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <!-- ================ Main Container Ends ================ -->
+
+    <!-- ================ Footer Starts ================ -->
+    <footer>
+      <div class="footer-container">
+        <div id="footer-item1" class="footer-item">
+          <p><b> FOLLOW US</b></p>
+          <a
+            href="https://www.linkedin.com/company/travel-and-payments/"
+            target="_blank"
+            ><img
+              src="/assets/icons/icons8-linkedin.svg"
+              alt="linkedin icon"
+              class="linkedin"
+          /></a>
+        </div>
+
+        <div id="footer-item2" class="footer-item">
+          <ul>
+            <li id="footer-copyright">© 2024 Travel & Payments</li>
+            <li><a href="/#contactSection">Contact</a></li>
+            <li><a href="/#aboutSection">About</a></li>
+            <li><a href="/offices/">Offices</a></li>
+            <li>
+              <a href="/global-operations/">Global operations</a>
+            </li>
+            <li>
+              <a href="/terms-of-use/">Terms of use</a>
+            </li>
+            <li>
+              <a href="/privacy-and-refund-policy/">Privacy & Refund Policy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- ================ Footer Ends ================ -->
+  </body>
+</html>

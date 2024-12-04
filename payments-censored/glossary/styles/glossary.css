@@ -1,0 +1,128 @@
+body {
+  background-color: var(--color-white);
+}
+
+.main-container {
+  position: relative;
+}
+/* ------------ Tablet design ------------ */
+@media (max-width: 1024px) {
+  .main-container {
+    padding: 0 clamp(1rem, 0.9429rem + 0.2857vw, 1.2rem);
+  }
+}
+
+/* =============== filter-button */
+#pc-filter-button-container {
+  position: fixed;
+  left: 50%;
+  bottom: clamp(1rem, 0.2143rem + 3.9286vw, 3.75rem);
+  transform: translateX(-50%);
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 1.2rem;
+  z-index: 2;
+
+  display: flex;
+  justify-content: flex-end;
+}
+
+#pc-filter-button {
+}
+
+#pc-filter-popup {
+  display: none;
+  position: absolute;
+  right: 1.2rem;
+  bottom: calc(100% + clamp(0.5rem, 0.3214rem + 0.8929vw, 1.125rem));
+
+  max-width: clamp(17rem, 13.8571rem + 15.7143vw, 28rem);
+  border-radius: 0.5rem;
+  background: var(--color-white);
+  box-shadow: 0px 0px 44px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+#pc-filter-popup.visible {
+  display: block;
+}
+
+.pc-filter-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pc-filter-label {
+  display: flex;
+  gap: clamp(0.625rem, 0.5179rem + 0.5357vw, 1rem);
+  align-items: baseline;
+
+  font-size: clamp(0.875rem, 0.7917rem + 0.3704vw, 1.125rem);
+  font-weight: 400;
+  color: var(--color-black);
+
+  padding: 1rem clamp(0.75rem, 0.5357rem + 1.0714vw, 1.5rem);
+  cursor: pointer;
+}
+.pc-filter-label.active {
+  background-color: var(--color-accent-light-blue);
+}
+.pc-filter-radio {
+  min-width: 1rem;
+  min-height: 1rem;
+  position: relative;
+  transform: translateY(22%);
+}
+
+/* ------------ Tablet design ------------ */
+@media (max-width: 1024px) {
+  #pc-filter-button-container {
+    padding: 0 clamp(1rem, 0.9429rem + 0.2857vw, 1.2rem);
+  }
+}
+
+/* ------------ Mobile design ------------ */
+@media (max-width: 480px) {
+  .primary-button {
+    width: fit-content;
+  }
+}
+
+/* =============== pc-glossary */
+.pc-glossary {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  padding-block: clamp(1.125rem, 0.1607rem + 4.8214vw, 4.5rem);
+}
+
+/* =============== pc-glossary__category */
+.pc-glossary__category header h2 {
+  font-size: clamp(1rem, 0.7143rem + 1.4286vw, 2rem);
+  font-weight: 700;
+  font-style: italic;
+  line-height: 1.55;
+  text-decoration: underline;
+  color: var(--color-grey-1);
+
+  margin-bottom: 1.5rem;
+}
+
+/* =============== pc-glossary__items */
+.pc-glossary__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  color: var(--color-grey-3);
+}
+
+/* =============== pc-glossary__item */
+.pc-glossary__item h3 {
+  font-size: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+  font-weight: 700;
+}
+.pc-glossary__item p {
+  font-size: clamp(0.75rem, 0.6071rem + 0.7143vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.6;
+}

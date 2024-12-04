@@ -888,7 +888,7 @@
 
 .contact-container {
   background: var(--color-accent-light-blue);
-  background-image: url(./assets/vectors/abstract-pattern.svg);
+  background-image: url(/assets/vectors/abstract-pattern.svg);
   background-position: bottom left;
   background-repeat: no-repeat;
   padding: 3.75rem;
