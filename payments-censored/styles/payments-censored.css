@@ -80,6 +80,7 @@ body {
   grid-area: payments-censored__subitem-3;
   background-color: var(--color-black);
   color: var(--color-white);
+  min-height: 19rem;
 
   display: flex;
   flex-direction: column;
@@ -90,7 +91,7 @@ body {
 
   background-image: url("/assets/images/payments-censored-mockup-sm.webp");
   background-position: bottom right -2rem;
-  background-size: 180%;
+  background-size: clamp(60rem, 23.0769rem + 57.6923vw, 75rem);
   background-repeat: no-repeat;
 }
 
@@ -103,6 +104,23 @@ body {
   font-size: clamp(1.625rem, 1.3036rem + 1.6071vw, 2.75rem);
   font-weight: 700;
   line-height: 1.35;
+}
+
+/* ------------ Tablet design ------------ */
+@media (max-width: 1024px) {
+  .payments-censored__item-1 {
+    grid-template-areas:
+      "payments-censored__subitem-1"
+      "payments-censored__subitem-2"
+      "payments-censored__subitem-3";
+  }
+
+  .payments-censored__item-1 .payments-censored__subitem-3 {
+    background-size: clamp(32rem, 24rem + 40vw, 60rem);
+  }
+}
+/* ------------ Mobile design ------------ */
+@media (max-width: 360px) {
 }
 
 /* =============== payments-censored__item-2 */
@@ -125,12 +143,19 @@ body {
 }
 .payments-censored__item-2 .payments-censored__subitem-2 {
   flex: 1;
+  min-height: 19rem;
 
   border-radius: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
 
   background-image: url("/assets/images/payments-censored-multiple-cards-mockup.webp");
   background-position: center;
   background-size: cover;
+}
+/* ------------ Tablet design ------------ */
+@media (max-width: 700px) {
+  .payments-censored__item-2 {
+    flex-direction: column;
+  }
 }
 
 /* =============== payments-censored__item-3 */
@@ -196,7 +221,11 @@ body {
 /* =============== payments-censored__item-4 */
 .payments-censored__item-4 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(22.875rem, 1fr));
+  /* grid-template-columns: repeat(auto-fit, minmax(22.875rem, 1fr)); */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(18rem, 16.6071rem + 6.9643vw, 22.875rem), 1fr)
+  );
   gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
 }
 .payments-censored__item-4 > * {
@@ -224,7 +253,7 @@ body {
   margin-top: clamp(1.125rem, 0.4643rem + 3.3036vw, 3.4375rem);
 }
 
-/* =============== payments-censored__item-4 */
+/* =============== payments-censored__item-5 */
 .payments-censored__item-5 {
   display: grid;
   gap: clamp(1.75rem, 1.3929rem + 1.7857vw, 3rem);
@@ -255,6 +284,15 @@ body {
   max-height: clamp(18.75rem, 13.3929rem + 26.7857vw, 37.5rem);
   border-radius: 2.5rem;
   overflow: hidden;
+}
+/* ------------ Tablet design ------------ */
+@media (max-width: 700px) {
+  .payments-censored__item-5 {
+    grid-template-areas:
+      "payments-censored__subitem-1"
+      "payments-censored__subitem-2"
+      "payments-censored__subitem-3";
+  }
 }
 
 /* =============== payments-censored__item-6 */
