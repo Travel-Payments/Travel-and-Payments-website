@@ -3,7 +3,7 @@ const navClose = document.querySelector(".nav-close")
 const navLinks = document.querySelector(".navlinks")
 const overlay = document.querySelector(".overlay")
 const contactForm = document.querySelector("#contactForm")
-const contactConfirmation = document.querySelector(".contact-confirmation")
+const tnpSnackbar = document.querySelector(".tnp-snackbar")
 const heroImgHorizontal = document.querySelector(".hero-img--horizontal")
 const heroImgVertical = document.querySelector(".hero-img--vertical")
 
@@ -25,7 +25,7 @@ overlay.addEventListener("click", () => {
 contactForm?.addEventListener("submit", function (event) {
   event.preventDefault()
   const formData = new FormData(this)
-  contactConfirmation.style.display = "flex"
+  tnpSnackbar.style.display = "flex"
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     body: formData,
@@ -33,7 +33,7 @@ contactForm?.addEventListener("submit", function (event) {
     .then((response) => response.json())
     .then((result) => {
       setTimeout(function () {
-        contactConfirmation.style.display = "none"
+        tnpSnackbar.style.display = "none"
         contactForm.reset()
       }, 5000)
     })
