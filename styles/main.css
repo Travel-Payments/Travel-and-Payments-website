@@ -338,24 +338,34 @@ nav ul li a.active {
 
 /* ------------ Snackbar styles ------------ */
 .tnp-snackbar {
-  display: flex;
-  /* display: none; */
+  display: none; /* Initially hidden */
   flex-direction: column;
   gap: 0.2rem;
   position: fixed;
   bottom: 1rem;
   right: 1rem;
+  height: fit-content;
   z-index: 1000;
   align-items: center;
-  overflow: hidden;
   justify-content: center;
   padding: 2rem 3.2rem;
   border-radius: 1rem;
   background-color: var(--color-white);
+  border: 2px solid transparent; /* Initially no border */
   box-shadow: 0.6rem 0.6rem 0.8rem rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateY(100%);
+  opacity: 0;
+  overflow: hidden;
 }
 
-.tnp-snackbar p {
+.tnp-snackbar--visible {
+  display: flex;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.tnp-snackbar__message {
   font-size: var(--font-heading-3);
   font-weight: var(--font-weight-heading-3);
   line-height: var(--line-height-heading-3);
@@ -363,7 +373,7 @@ nav ul li a.active {
   text-align: center;
 }
 
-.tnp-snackbar p span {
+.tnp-snackbar__detail {
   font-size: var(--font-label-1);
   font-weight: var(--font-weight-label-1);
   line-height: var(--line-height-label-1);
@@ -377,24 +387,77 @@ nav ul li a.active {
   left: 0;
   height: 0.4rem;
   width: 100%;
-  background: var(--color-accent-blue); /* Same color as popup background */
-  animation: shrink 5s linear forwards; /* Animating for 8 seconds */
+  background: var(--color-accent-blue);
+  transform-origin: left center;
+  animation: progressed 5s linear forwards;
 }
-
-@keyframes shrink {
+@keyframes progressed {
   from {
-    width: 100%;
+    transform: scaleX(1);
   }
   to {
-    width: 0;
+    transform: scaleX(0);
   }
 }
 
-/* ------------ Mobile design ------------ */
+/* ------------ Snackbar Types ------------ */
+.tnp-snackbar--success {
+  border-color: #4caf50; /* Green border */
+}
+
+.tnp-snackbar--error {
+  border-color: #f44336; /* Red border */
+}
+
+.tnp-snackbar--info {
+  border-color: #2196f3; /* Blue border */
+}
+
+.tnp-snackbar--warning {
+  border-color: #ff9800; /* Orange border */
+}
+
+.tnp-snackbar--success .tnp-snackbar__progress-bar {
+  background-color: #388e3c; /* Darker green */
+}
+
+.tnp-snackbar--error .tnp-snackbar__progress-bar {
+  background-color: #d32f2f; /* Darker red */
+}
+
+.tnp-snackbar--info .tnp-snackbar__progress-bar {
+  background-color: #1976d2; /* Darker blue */
+}
+
+.tnp-snackbar--warning .tnp-snackbar__progress-bar {
+  background-color: #f57c00; /* Darker orange */
+}
+
+/* ------------ Snackbar Types for text and border ------------ */
+.tnp-snackbar--success .tnp-snackbar__message,
+.tnp-snackbar--success .tnp-snackbar__detail {
+  color: #4caf50; /* Green text */
+}
+
+.tnp-snackbar--error .tnp-snackbar__message,
+.tnp-snackbar--error .tnp-snackbar__detail {
+  color: #f44336; /* Red text */
+}
+
+.tnp-snackbar--info .tnp-snackbar__message,
+.tnp-snackbar--info .tnp-snackbar__detail {
+  color: #2196f3; /* Blue text */
+}
+
+.tnp-snackbar--warning .tnp-snackbar__message,
+.tnp-snackbar--warning .tnp-snackbar__detail {
+  color: #ff9800; /* Orange text */
+}
+
+/* ------------ Mobile Design ------------ */
 @media (max-width: 480px) {
   .tnp-snackbar {
     top: 1rem;
-    height: fit-content;
     right: 50%;
     transform: translateX(50%);
     width: 90%;
