@@ -740,27 +740,27 @@
   padding: 6rem 7.5rem 7rem;
   width: min-content;
   margin: auto;
+
+  width: 100%;
 }
 
 .about-images {
-  height: fit-content;
-  width: max-content;
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
-}
-
-.about-images img {
-  height: 25rem;
-  object-fit: cover;
-  object-position: 50% 35%;
+  width: 100%;
+  place-content: center;
 }
 
 .about-images-container {
+  min-width: 20rem;
   position: relative;
-  height: fit-content;
   border-radius: 1rem;
   overflow: hidden;
   height: 25rem;
+
+  background-size: cover;
+  background-position: top 25% center;
 }
 
 .about-image-overlay {
@@ -784,6 +784,22 @@
   font-size: var(--font-body-2);
   text-align: center;
   width: 100%;
+}
+
+.vishal {
+  background-image: url(/assets/images/vishal-mehta.webp);
+}
+.chee {
+  background-image: url(/assets/images/sheue-chee-beh.webp);
+}
+.kanika {
+  background-image: url(/assets/images/kanika-mittal.webp);
+}
+.prachi {
+  background-image: url(/assets/images/prachi-aggarwal.webp);
+}
+.janet {
+  background-image: url(/assets/images/janet-tan.webp);
 }
 
 .about-content {
@@ -810,7 +826,6 @@
   display: inline-block;
   max-width: 100%;
   margin-top: 0.5rem;
-  /* margin-left: -0.15rem; */
 }
 
 /* ------------ Mid-Desktop design ------------ */
@@ -818,10 +833,6 @@
   .about-section {
     padding: 6rem 1rem;
     gap: 2rem;
-  }
-
-  .about-images-container {
-    width: 16rem;
   }
 }
 
@@ -837,12 +848,6 @@
     gap: 0.5rem;
   }
 
-  .about-images-container,
-  .about-images img {
-    width: -webkit-fill-available;
-    height: 20rem;
-  }
-
   .about-image-overlay {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
   }
@@ -853,29 +858,31 @@
 }
 
 /* ------------ Mobile design ------------ */
-@media (max-width: 768px) {
-  .about-images-container,
-  .about-images img {
-    width: -webkit-fill-available;
-    height: 15rem;
+@media (max-width: 780px) {
+  .about-images-container {
+    min-width: 18rem;
   }
 }
-
-/* ------------ Mobile design ------------ */
+@media (max-width: 715px) {
+  .about-images-container {
+    min-width: 16rem;
+  }
+}
+@media (max-width: 650px) {
+  .about-images-container {
+    min-width: 15rem;
+  }
+}
+@media (max-width: 615px) {
+  .about-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  }
+}
 @media (max-width: 540px) {
   .about-section {
     padding: 2rem 1rem;
     gap: 1.2rem;
-  }
-
-  .about-images {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .about-images-container,
-  .about-images img {
-    height: 25rem;
   }
 }
 
