@@ -139,6 +139,7 @@ body {
   width: 75%;
   aspect-ratio: 16 / 9;
   border-radius: 0.75em;
+  border: 1px solid var(--color-accent-light-blue);
 }
 /* ------------ Mobile design ------------ */
 @media (max-width: 900px) {
