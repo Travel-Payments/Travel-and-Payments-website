@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:docs.google.com)",
-      "Read(C:\\Users\\HP\\Downloads/**)"
+      "Read(C:\\Users\\HP\\Downloads/**)",
+      "Read(//c/Users/HP/Downloads/**)"
     ],
     "deny": [],
     "ask": []

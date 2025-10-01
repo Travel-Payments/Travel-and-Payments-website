@@ -1,4 +1,4 @@
-/* Privacy Policy Page Styles */
+/* Terms & Conditions Page Styles */
 
 .main-container {
   min-height: 100vh;
@@ -50,6 +50,10 @@
 
 .legal-section {
   margin-bottom: 35px;
+}
+
+.legal-section:first-of-type {
+  margin-top: 40px;
 }
 
 .legal-section h3 {
@@ -125,25 +129,25 @@ strong {
   .legal-content {
     padding: 30px 15px;
   }
-  
+
   .legal-header h1 {
     font-size: 2rem;
   }
-  
+
   .terms-section h2,
   .privacy-section h2 {
     font-size: 1.7rem;
   }
-  
+
   .legal-section h3 {
     font-size: 1.2rem;
   }
-  
+
   .legal-section p,
   .legal-section li {
     font-size: 1rem;
   }
-  
+
   .contact-section {
     padding: 30px 20px;
   }
@@ -153,16 +157,16 @@ strong {
   .main-container {
     padding-top: 80px;
   }
-  
+
   .legal-header h1 {
     font-size: 1.8rem;
   }
-  
+
   .terms-section h2,
   .privacy-section h2 {
     font-size: 1.5rem;
   }
-  
+
   .legal-section h3 {
     font-size: 1.1rem;
   }
